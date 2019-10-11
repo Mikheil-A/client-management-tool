@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'client-management'`, () => {
+  it(`should have as title 'client-management-tool'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('client-management');
+    expect(app.title).toEqual('client-management-tool');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('client-management app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('client-management-tool app is running!');
   });
 });

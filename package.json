@@ -1,5 +1,5 @@
 {
-  "name": "client-management",
+  "name": "client-management-tool",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mock:server": "json-server --watch server/db.json",
-    "start:proxy": "ng serve --proxy-config proxy.conf.json"
+    "start:proxy": "ng serve --proxy-config proxy.conf.json --port 4027",
+    "mock:server": "json-server --watch server/db.json"
   },
   "private": true,
   "dependencies": {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "client-management": {
+    "client-management-tool": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/client-management",
+            "outputPath": "dist/client-management-tool",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "client-management:build"
+            "browserTarget": "client-management-tool:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "client-management:build:production"
+              "browserTarget": "client-management-tool:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "client-management:build"
+            "browserTarget": "client-management-tool:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "client-management:serve"
+            "devServerTarget": "client-management-tool:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "client-management:serve:production"
+              "devServerTarget": "client-management-tool:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "client-management"
+  "defaultProject": "client-management-tool"
 }
