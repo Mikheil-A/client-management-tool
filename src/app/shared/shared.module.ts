@@ -4,6 +4,8 @@ import {CommonModule} from '@angular/common';
 
 // modules
 import {MatModule} from '../mat/mat.module';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+
 
 // services
 import {MatSnackBarService} from './services/mat-snack-bar-service.service';
@@ -16,10 +18,14 @@ import {MatSnackBarService} from './services/mat-snack-bar-service.service';
   ],
   imports: [
     CommonModule,
-    MatModule
+    MatModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
-    MatModule
+    MatModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class SharedModule {

@@ -11,6 +11,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatDialogModule,
     MatIconModule,
     MatSidenavModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTooltipModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,
@@ -39,7 +43,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatDialogModule,
     MatIconModule,
     MatSidenavModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTooltipModule,
+    MatSelectModule
   ]
 })
 export class MatModule {

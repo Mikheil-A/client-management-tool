@@ -1,1 +1,72 @@
-<p>add-client-dialog works!</p>
+<div id="dialog-container">
+  <h1>სტუდენტის {{addOrEditTitle}}</h1>
+
+  <form [formGroup]="formGroup" (ngSubmit)="save()">
+    <mat-form-field appearance="outline" style="grid-area: firstName">
+      <mat-label>სახელი</mat-label>
+      <input type="text" formControlName="firstName" matInput placeholder="სახელი" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="grid-area: lastName">
+      <mat-label>გვარი</mat-label>
+      <input type="text" formControlName="lastName" matInput placeholder="გვარი" required>
+    </mat-form-field>
+
+    <div style="grid-area: userStatus; display: flex; flex-direction: column">
+      <label>სქესი</label>
+      <mat-form-field appearance="outline">
+        <mat-select formControlName="gender">
+          <mat-option [value]="'ქალი'">მდედრობით</mat-option>
+          <mat-option [value]="'კაცი'">მამრობითი</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline" style="grid-area: address">
+      <mat-label>პირადი ნომერი</mat-label>
+      <input type="text" formControlName="pid" matInput placeholder="პირადი ნომერი" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="grid-area: address">
+      <mat-label>ტელეფონი</mat-label>
+      <input type="text" formControlName="pid" matInput placeholder="ტელეფონი" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="grid-area: address">
+      <mat-label>ქვეყანა</mat-label>
+      <input type="text" formControlName="laCountry" matInput placeholder="ქვეყანა" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="grid-area: address">
+      <mat-label>ქალაქი</mat-label>
+      <input type="text" formControlName="laCity" matInput placeholder="ქალაქი" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="grid-area: address">
+      <mat-label>მისამართი</mat-label>
+      <input type="text" formControlName="laAddress" matInput placeholder="მისამართი" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="grid-area: address">
+      <mat-label>ქვეყანა</mat-label>
+      <input type="text" formControlName="aaCountry" matInput placeholder="ქვეყანა" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="grid-area: address">
+      <mat-label>ქალაქი</mat-label>
+      <input type="text" formControlName="aaCity" matInput placeholder="ქალაქი" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="grid-area: address">
+      <mat-label>მისამართი</mat-label>
+      <input type="text" formControlName="aaAddress" matInput placeholder="მისამართი" required>
+    </mat-form-field>
+
+
+    <button mat-button type="submit"
+            class="big-button-style"
+            style="grid-area: submitBtn"
+            [ngStyle]="{'cursor': formGroup.invalid ? 'not-allowed' : 'pointer'}">შენახვა
+    </button>
+  </form>
+</div>

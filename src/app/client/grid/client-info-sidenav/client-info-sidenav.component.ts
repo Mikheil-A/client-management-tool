@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 import {MatDialog} from '@angular/material/dialog';
-import {AddAccountDialogComponent} from '../../../account/add-account-dialog/add-account-dialog.component';
+import {AddAccountDialogComponent} from '../../add-account-dialog/add-account-dialog.component';
 
 
 

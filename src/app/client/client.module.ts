@@ -8,6 +8,7 @@ import {GridComponent} from './grid/grid.component';
 // dialogs
 import {AddOrEditClientDialogComponent} from './grid/dialogs/add-or-edit-client-dialog/add-or-edit-client-dialog.component';
 import {ConfirmClientDeletionDialogComponent} from './grid/dialogs/confirm-client-deletion-dialog/confirm-client-deletion-dialog.component';
+import {AddAccountDialogComponent} from './add-account-dialog/add-account-dialog.component';
 
 // sidenavs
 import {ClientInfoSidenavComponent} from './grid/client-info-sidenav/client-info-sidenav.component';
@@ -24,7 +25,8 @@ import {ClientsService} from './services/clients.service';
     GridComponent,
     AddOrEditClientDialogComponent,
     ConfirmClientDeletionDialogComponent,
-    ClientInfoSidenavComponent
+    ClientInfoSidenavComponent,
+    AddAccountDialogComponent
   ],
   providers: [
     ClientsService
@@ -36,7 +38,8 @@ import {ClientsService} from './services/clients.service';
   ],
   entryComponents: [
     AddOrEditClientDialogComponent,
-    ConfirmClientDeletionDialogComponent
+    ConfirmClientDeletionDialogComponent,
+    AddAccountDialogComponent
   ]
 })
 export class ClientModule {

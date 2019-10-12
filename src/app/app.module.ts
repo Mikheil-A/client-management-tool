@@ -10,7 +10,6 @@ import {ClientModule} from './client/client.module';
 import {AppRoutingModule} from './app-routing.module';
 
 import {NgxSpinnerModule} from 'ngx-spinner';
-import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 
 
@@ -25,8 +24,6 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
     AppRoutingModule,
 
     NgxSpinnerModule,
-    ReactiveFormsModule,
-    FormsModule,
 
     ClientModule
   ],
