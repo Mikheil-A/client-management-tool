@@ -9,8 +9,11 @@ import {GridComponent} from './grid/grid.component';
 import {AddOrEditClientDialogComponent} from './grid/dialogs/add-or-edit-client-dialog/add-or-edit-client-dialog.component';
 import {ConfirmClientDeletionDialogComponent} from './grid/dialogs/confirm-client-deletion-dialog/confirm-client-deletion-dialog.component';
 
+// sidenavs
+import {ClientInfoSidenavComponent} from './grid/client-info-sidenav/client-info-sidenav.component';
+
 // modules
-import {MatModule} from '../mat/mat.module';
+import {SharedModule} from '../shared/shared.module';
 
 // services
 import {ClientsService} from './services/clients.service';
@@ -20,7 +23,8 @@ import {ClientsService} from './services/clients.service';
   declarations: [
     GridComponent,
     AddOrEditClientDialogComponent,
-    ConfirmClientDeletionDialogComponent
+    ConfirmClientDeletionDialogComponent,
+    ClientInfoSidenavComponent
   ],
   providers: [
     ClientsService
@@ -28,9 +32,8 @@ import {ClientsService} from './services/clients.service';
   imports: [
     CommonModule,
     ClientRoutingModule,
-    MatModule
+    SharedModule
   ],
-  exports: [],
   entryComponents: [
     AddOrEditClientDialogComponent,
     ConfirmClientDeletionDialogComponent

@@ -9,6 +9,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {ClientModule} from './client/client.module';
 import {AppRoutingModule} from './app-routing.module';
 
+import {NgxSpinnerModule} from 'ngx-spinner';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import {AppRoutingModule} from './app-routing.module';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+
+    NgxSpinnerModule,
+    ReactiveFormsModule,
+    FormsModule,
 
     ClientModule
   ],

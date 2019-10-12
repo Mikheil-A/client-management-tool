@@ -1,1 +1,7 @@
-<p>confirm-client-deletion-dialog works!</p>
+<h1>ნამდვილად გსურთ წაშლა?</h1>
+
+
+<div id="actions">
+  <button mat-button (click)="matDialogRef.close()">არა</button>
+  <button mat-button (click)="onDelete()" id="delete-btn">წაშლა</button>
+</div>

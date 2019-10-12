@@ -1,5 +1,7 @@
-import {Component, OnInit, Inject} from '@angular/core';
+import {Component, EventEmitter, Inject} from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {ClientsService} from '../../../services/clients.service';
+
 
 
 @Component({
@@ -7,14 +9,16 @@ import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
   templateUrl: './confirm-client-deletion-dialog.component.html',
   styleUrls: ['./confirm-client-deletion-dialog.component.scss']
 })
-export class ConfirmClientDeletionDialogComponent implements OnInit {
+export class ConfirmClientDeletionDialogComponent {
+  onClientDelete = new EventEmitter();
 
-  constructor(private _matDialogRef: MatDialogRef<ConfirmClientDeletionDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any) {
+
+  constructor(public matDialogRef: MatDialogRef<ConfirmClientDeletionDialogComponent>,
+              @Inject(MAT_DIALOG_DATA) private _dialogData: any) {
   }
 
-  ngOnInit() {
-    console.log(this.data);
-  }
 
+  onDelete() {
+    this.onClientDelete.emit();
+  }
 }

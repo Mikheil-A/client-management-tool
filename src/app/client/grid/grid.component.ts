@@ -8,6 +8,10 @@ import {ClientsService} from '../services/clients.service';
 import {MatDialog} from '@angular/material/dialog';
 import {AddOrEditClientDialogComponent} from './dialogs/add-or-edit-client-dialog/add-or-edit-client-dialog.component';
 import {ConfirmClientDeletionDialogComponent} from './dialogs/confirm-client-deletion-dialog/confirm-client-deletion-dialog.component';
+import {MatSidenav} from '@angular/material/sidenav';
+import {NgxSpinnerService} from 'ngx-spinner';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatSnackBarService} from '../../shared/services/mat-snack-bar-service.service';
 
 
 
@@ -34,10 +38,17 @@ export class GridComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
+  @ViewChild('clientInfoSidenav', {static: false}) clientInfoSidenav: MatSidenav;
+
+
 
   constructor(private _httpClient: HttpClient,
               private _clientsService: ClientsService,
-              private _matDialog: MatDialog) {
+              private _matDialog: MatDialog,
+              private _ngxSpinnerService: NgxSpinnerService,
+              private _matSnackBar: MatSnackBar,
+              private _snackBar: MatSnackBar,
+              private _matSnackBarService: MatSnackBarService) {
   }
 
   ngOnInit() {
@@ -46,7 +57,10 @@ export class GridComponent implements OnInit {
 
 
   private _fetchGridData() {
+    this._ngxSpinnerService.show();
     this._clientsService.search().subscribe((clients: Client[]) => {
+      this._ngxSpinnerService.hide();
+
       this.dataSource = new MatTableDataSource(clients);
 
       this.dataSource.paginator = this.paginator;
@@ -68,9 +82,23 @@ export class GridComponent implements OnInit {
     });
   }
 
-  confirmDeletion() {
-    this._matDialog.open(ConfirmClientDeletionDialogComponent, {
-      data: {}
+  confirmDeletion(clientId: number) {
+    const dialogRef = this._matDialog.open(ConfirmClientDeletionDialogComponent, {
+      data: {
+        id: null
+      }
+    });
+
+    const deleteSubscription = dialogRef.componentInstance.onClientDelete.subscribe(() => {
+      this._clientsService.delete(clientId).subscribe(() => {
+        dialogRef.close();
+        this._matSnackBarService.openSnackBar('კლიენტი წაიშალა');
+        this._fetchGridData();
+      });
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      deleteSubscription.unsubscribe();
     });
   }
 }

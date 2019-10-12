@@ -9,6 +9,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatPaginatorModule,
     MatInputModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
+    MatSnackBarModule
   ],
   exports: [
     MatButtonModule,
@@ -33,7 +37,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatPaginatorModule,
     MatInputModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
+    MatSnackBarModule
   ]
 })
 export class MatModule {
