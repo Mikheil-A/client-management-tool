@@ -13,7 +13,7 @@
     <button mat-button mat-icon-button
             class="addButton"
             matTooltip="კლიენტის დამატება"
-            (click)="openAddOrEditClientDialog()">
+            (click)="openAddOrEditClientDialog(null)">
       <mat-icon>add_circle</mat-icon>
     </button>
 
@@ -69,7 +69,7 @@
           <th mat-header-cell *matHeaderCellDef></th>
           <td mat-cell *matCellDef="let row">
             <button mat-button mat-icon-button
-                    (click)="openAddOrEditClientDialog()"
+                    (click)="openAddOrEditClientDialog(row)"
                     matTooltip="ჩასწორება">
               <mat-icon>edit</mat-icon>
             </button>

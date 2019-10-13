@@ -76,9 +76,16 @@ export class GridComponent implements OnInit {
     }
   }
 
-  openAddOrEditClientDialog() {
-    this._matDialog.open(AddOrEditClientDialogComponent, {
-      data: null
+  openAddOrEditClientDialog(record: object) {
+    const dialogRef = this._matDialog.open(AddOrEditClientDialogComponent, {
+      data: record
+    });
+
+    dialogRef.afterClosed().subscribe((changed: boolean) => {
+      if (changed) {
+        this._matSnackBarService.openSnackBar('წარმატებით შეინახა');
+        this._fetchGridData();
+      }
     });
   }
 

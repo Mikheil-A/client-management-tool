@@ -24,12 +24,14 @@
 
     <mat-form-field appearance="outline" style="grid-area: address">
       <mat-label>პირადი ნომერი</mat-label>
-      <input type="text" formControlName="pid" matInput placeholder="პირადი ნომერი" required>
+      <input type="text" formControlName="pid" matInput placeholder="პირადი ნომერი" required
+             maxlength="11" minlength="11">
     </mat-form-field>
 
     <mat-form-field appearance="outline" style="grid-area: address">
       <mat-label>ტელეფონი</mat-label>
-      <input type="text" formControlName="pid" matInput placeholder="ტელეფონი" required>
+      <input type="text" formControlName="phone" matInput placeholder="ტელეფონი" required
+             maxlength="9">
     </mat-form-field>
 
     <mat-form-field appearance="outline" style="grid-area: address">

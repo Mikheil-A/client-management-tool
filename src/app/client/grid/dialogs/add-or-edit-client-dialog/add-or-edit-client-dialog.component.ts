@@ -54,21 +54,25 @@ export class AddOrEditClientDialogComponent implements OnInit {
     this._inputFieldsInitialValues.gender = this._clientData.gender;
     this._inputFieldsInitialValues.pid = this._clientData.pid;
     this._inputFieldsInitialValues.phone = this._clientData.phone;
-    this._inputFieldsInitialValues.laContry = this._clientData.legalAddress.country;
+    this._inputFieldsInitialValues.laCountry = this._clientData.legalAddress.country;
     this._inputFieldsInitialValues.laCity = this._clientData.legalAddress.city;
     this._inputFieldsInitialValues.laAddress = this._clientData.legalAddress.address;
-    this._inputFieldsInitialValues.aaContry = this._clientData.actualAddress.country;
+    this._inputFieldsInitialValues.aaCountry = this._clientData.actualAddress.country;
     this._inputFieldsInitialValues.aaCity = this._clientData.actualAddress.city;
     this._inputFieldsInitialValues.aaAddress = this._clientData.actualAddress.address;
   }
 
   private _initializeForm() {
     this.formGroup = new FormGroup({
-      'firstName': new FormControl(this._inputFieldsInitialValues.firstName, Validators.required),
-      'lastName': new FormControl(this._inputFieldsInitialValues.lastName, Validators.required),
-      'gender': new FormControl(this._inputFieldsInitialValues.gender, [Validators.required, Validators.email]),
-      'pid': new FormControl(this._inputFieldsInitialValues.pid, Validators.required),
-      'phone': new FormControl(this._inputFieldsInitialValues.phone, Validators.required),
+      'firstName': new FormControl(this._inputFieldsInitialValues.firstName,
+        [Validators.required, this._nameValidator]),
+      'lastName': new FormControl(this._inputFieldsInitialValues.lastName,
+        [Validators.required, this._nameValidator]),
+      'gender': new FormControl(this._inputFieldsInitialValues.gender, Validators.required),
+      'pid': new FormControl(this._inputFieldsInitialValues.pid,
+        [Validators.required, Validators.pattern('^[0-9]*$')]),
+      'phone': new FormControl(this._inputFieldsInitialValues.phone,
+        [Validators.required, Validators.pattern('^5.{8}')]),
       'laCountry': new FormControl(this._inputFieldsInitialValues.laCountry, Validators.required),
       'laCity': new FormControl(this._inputFieldsInitialValues.laCity, Validators.required),
       'laAddress': new FormControl(this._inputFieldsInitialValues.laAddress, Validators.required),
@@ -76,6 +80,22 @@ export class AddOrEditClientDialogComponent implements OnInit {
       'aaCity': new FormControl(this._inputFieldsInitialValues.aaCity, Validators.required),
       'aaAddress': new FormControl(this._inputFieldsInitialValues.aaAddress, Validators.required)
     });
+  }
+
+  private _nameValidator(control: FormControl): { [s: string]: boolean } {
+    if (control.root['controls'] && control.value) {
+      const firstName = control.value;
+      const re1 = new RegExp('^[a-zA-Z]{2,50}$');
+      const re2 = new RegExp('^[ა-ჰ]{2,50}$');
+
+      // ^([a-zA-Z]|[ა-ჰ]){3,5}$ (XOR regex instead of or)
+      if ((firstName.match(re1) && !firstName.match(re2)) ||
+        (!firstName.match(re1) && firstName.match(re2))) {
+        return null; // valid input value
+      } else {
+        return {'invalid input value': true};
+      }
+    }
   }
 
   closeDialog(wasAClientAdded: boolean) {
@@ -86,14 +106,14 @@ export class AddOrEditClientDialogComponent implements OnInit {
     if (this.formGroup.valid) {
       const requestData = this.formGroup.value;
       requestData['legalAddress'] = {
-        country: 'x',
-        city: 'x',
-        address: 'x'
+        country: this.formGroup.value.laCountry,
+        city: this.formGroup.value.laCity,
+        address: this.formGroup.value.laAddress
       };
       requestData['actualAddress'] = {
-        country: 'x',
-        city: 'x',
-        address: 'x'
+        country: this.formGroup.value.aaCountry,
+        city: this.formGroup.value.aaCity,
+        address: this.formGroup.value.aaAddress
       };
 
       if (this._clientData) {
