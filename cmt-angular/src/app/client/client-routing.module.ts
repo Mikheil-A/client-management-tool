@@ -4,8 +4,8 @@ import {GridComponent} from './grid/grid.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'clients', pathMatch: 'full'},
-  {path: 'clients', component: GridComponent},
+  {path: '', redirectTo: 'Clients', pathMatch: 'full'},
+  {path: 'Clients', component: GridComponent},
 ];
 
 
