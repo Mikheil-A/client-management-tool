@@ -1,5 +1,4 @@
-# ClientManagementTool
-
+# ClientManagementTool (Angular)
 
 * run `npm run start:proxy` and go to http://localhost:4027
 * run `npm run mock:server` and go to http://localhost:3000/client-db to watch the data
