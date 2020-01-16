@@ -1,7 +1,7 @@
 # Client Management Tool in React
 
 * run `npm start` to start the app and go to http://localhost:3002
-* run `npm run mock:server` to start server (go to http://localhost:3005/clients to watch the data).
+* run `npm run mock:server` to start server (go to http://localhost:3005/clients or http://localhost:3005/accounts to watch the data).
 
 
 <!--
@@ -90,6 +90,44 @@ But I build it in React later just for the sake of learning and practising React
         "address": "Howe St, Vancouver, BC VZS 2S8"
       },
       "photo": ""
+    }
+  ],
+
+  "accounts": [
+    {
+      "id": 1,
+      "client-id": 1,
+      "type": "მიმდინარე",
+      "currency": "USD",
+      "status": "აქტიური"
+    },
+    {
+      "id": 2,
+      "client-id": 1,
+      "type": "დაგროვებითი",
+      "currency": "GEL",
+      "status": "გახურული"
+    },
+    {
+      "id": 3,
+      "client-id": 2,
+      "type": "შემნახველი",
+      "currency": "EUR",
+      "status": "აქტიური"
+    },
+    {
+      "id": 4,
+      "client-id": 2,
+      "type": "მიმდინარე",
+      "currency": "RUB",
+      "status": "გახურული"
+    },
+    {
+      "id": 5,
+      "client-id": 3,
+      "type": "მიმდინარე",
+      "currency": "USD",
+      "status": "აქტიური"
     }
   ]
 }
