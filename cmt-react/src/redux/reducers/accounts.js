@@ -2,7 +2,7 @@ import {ADD_ACCOUNT, EDIT_ACCOUNT, REMOVE_ACCOUNT} from "../actions/actionTypes"
 
 
 const initialState = {
-  accounts: {}
+  accounts: []
 };
 
 

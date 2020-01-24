@@ -2,17 +2,19 @@ import {ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT} from "../actions/actionTypes";
 
 
 const initialState = {
-  client: {}
+  clients: []
 };
 
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_CLIENT: {
-
-      console.log(action);
-
-      return {};
+      return {
+        clients: [
+          ...state.clients,
+          action.payload
+        ]
+      };
     }
     case EDIT_CLIENT: {
 

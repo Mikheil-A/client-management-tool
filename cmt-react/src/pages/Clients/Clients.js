@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from 'react';
 import './Clients.scss';
 import {jsonServerInstance as axios} from '../../axios';
+import {connect} from "react-redux";
+import {addClient} from "../../redux/actions/actions";
 
 
 
@@ -14,19 +16,30 @@ class Clients extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props.clients);
     this.fetchClients();
   }
 
 
-  fetchClients() {
+  fetchClients = () => {
     axios.get('/clients')
       .then(res => {
-        this.setState({
-          ...this.state,
-          clients: res
-        })
+        // this.storeClientsToComponentLevelState(res);
+        this.storeClientsToReduxStore(res);
       })
-  }
+  };
+
+  storeClientsToComponentLevelState = data => {
+    this.setState({
+      ...this.state,
+      clients: data
+    })
+  };
+
+  storeClientsToReduxStore = data => {
+    this.props.addClient(data);
+  };
+
 
   render() {
     return (
@@ -35,7 +48,21 @@ class Clients extends Component {
       </Fragment>
     )
   }
-
 }
 
-export default Clients;
+
+// const mapStateToProps = null;
+const mapStateToProps = state => {
+  return {
+    clients: state.clients
+  };
+};
+
+const mapDispatchToProps = {
+  addClient: addClient
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Clients);
