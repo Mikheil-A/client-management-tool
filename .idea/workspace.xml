@@ -17,7 +17,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmt-react/src/components/Footer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Others/react-redux-notes-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,7 +63,11 @@
       <updated>1579084372890</updated>
       <workItem from="1579084374033" duration="626000" />
       <workItem from="1579091573104" duration="3791000" />
-      <workItem from="1579167029407" duration="8935000" />
+      <workItem from="1579167029407" duration="8982000" />
+      <workItem from="1579700683780" duration="982000" />
+      <workItem from="1579725223228" duration="203000" />
+      <workItem from="1579791143491" duration="850000" />
+      <workItem from="1579856286922" duration="4497000" />
     </task>
     <servers />
   </component>
