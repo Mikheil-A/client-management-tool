@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/READ.ME.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/READ.ME.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +35,14 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\components\Footer" />
-      <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\pages" />
       <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\components\Table" />
       <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\components\Footer" />
+      <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -62,7 +62,7 @@
       <workItem from="1579725223228" duration="203000" />
       <workItem from="1579791143491" duration="850000" />
       <workItem from="1579856286922" duration="8247000" />
-      <workItem from="1581668833667" duration="15287000" />
+      <workItem from="1581668833667" duration="15350000" />
     </task>
     <servers />
   </component>
