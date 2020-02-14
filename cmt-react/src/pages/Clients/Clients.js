@@ -63,17 +63,25 @@ class Clients extends Component {
     this.props.drawerOpenStateChange('afwfw');
   };
 
-
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log('>>>', prevProps.drawerOpenStateChange);
     if (prevProps.drawerOpenStateChange !== this.props.drawerOpenStateChange) {
       // Do whatever you want
       console.log('sheicvala blaid');
+
+
+
+
     }
   }
 
 
+
+
   render() {
+
+
+
     return (
       <Fragment>
         <GridHeader/>

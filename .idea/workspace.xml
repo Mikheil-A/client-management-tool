@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/READ.ME.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MSDA/lawyers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Others/25-react-projects" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,7 +64,8 @@
       <workItem from="1579725223228" duration="203000" />
       <workItem from="1579791143491" duration="850000" />
       <workItem from="1579856286922" duration="8247000" />
-      <workItem from="1581668833667" duration="15350000" />
+      <workItem from="1581668833667" duration="15390000" />
+      <workItem from="1581687225515" duration="498000" />
     </task>
     <servers />
   </component>
@@ -82,10 +85,21 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+    <option name="LIMIT_HISTORY" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/cmt-react" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2930" y="397" key="FileChooserDialogImpl" timestamp="1581684214920">
+    <state x="2930" y="397" key="FileChooserDialogImpl" timestamp="1581687260347">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
-    <state x="2930" y="397" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581684214920" />
+    <state x="2930" y="397" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581687260347" />
+    <state x="2592" y="257" key="SettingsEditor" timestamp="1581687624750">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2592" y="257" key="SettingsEditor/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581687624750" />
   </component>
 </project>
