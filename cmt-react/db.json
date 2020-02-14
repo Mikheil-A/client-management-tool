@@ -17,7 +17,7 @@
         "city": "Tbilisi",
         "address": "address"
       },
-      "photo": ""
+      "photo": "https://randomuser.me/api/portraits/men/93.jpg"
     },
     {
       "id": 2,
@@ -36,7 +36,7 @@
         "city": "Vancouver",
         "address": "Howe St, Vancouver, BC VZS 2S8"
       },
-      "photo": ""
+      "photo": "https://randomuser.me/api/portraits/women/92.jpg"
     },
     {
       "id": 3,
@@ -55,7 +55,7 @@
         "city": "Toronto",
         "address": "Howe St, BC VZS 2S8"
       },
-      "photo": ""
+      "photo": "https://randomuser.me/api/portraits/women/91.jpg"
     },
     {
       "id": 4,
@@ -74,7 +74,7 @@
         "city": "Vancouver",
         "address": "Howe St, Vancouver, BC VZS 2S8"
       },
-      "photo": ""
+      "photo": "https://randomuser.me/api/portraits/men/90.jpg"
     }
   ],
 

@@ -1,0 +1,23 @@
+tr {
+	&:hover {
+		//background-color: #F7F7FA;
+
+		#action-icons {
+			visibility: visible;
+		}
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	#profile_image {
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+	}
+
+	#action-icons {
+		visibility: hidden;
+	}
+}

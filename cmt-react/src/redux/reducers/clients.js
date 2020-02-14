@@ -9,12 +9,10 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_CLIENT: {
-      return {
-        clients: [
-          ...state.clients,
-          action.payload
-        ]
-      };
+      return [
+        ...state.clients,
+        ...action.payload.data.data
+      ];
     }
     case EDIT_CLIENT: {
 

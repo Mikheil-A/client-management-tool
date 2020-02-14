@@ -3,7 +3,10 @@ import './Clients.scss';
 import {jsonServerInstance as axios} from '../../axios';
 import {connect} from "react-redux";
 import {addClient} from "../../redux/actions/actions";
-
+import Grid from "../../components/Grid/Grid";
+import GridHeader from "../../components/GridHeader/GridHeader";
+import Drawer from '@material-ui/core/Drawer';
+import DrawerContent from "../../components/DrawerContent/DrawerContent";
 
 
 class Clients extends Component {
@@ -11,7 +14,9 @@ class Clients extends Component {
     super(props);
 
     this.state = {
-      clients: []
+      isDrawerOpened: false,
+      clients: [],
+      client: {}
     }
   }
 
@@ -40,11 +45,32 @@ class Clients extends Component {
     this.props.addClient(data);
   };
 
+  toggleDrawer = (side, open) => event => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    // setState({...state, [side]: open});
+  };
+
+  onDrawerToggle = (clickedRow) => {
+    this.setState({
+      ...this.state,
+      client: clickedRow,
+      isDrawerOpened: !this.state.isDrawerOpened
+    });
+  };
+
 
   render() {
     return (
       <Fragment>
-        <h1>Clients component</h1>
+        <GridHeader/>
+        {this.props.clients.length > 0 ? <Grid data={this.props.clients} onDriverOpen={this.onDrawerToggle}/> : null}
+
+        <Drawer anchor="right" open={this.state.isDrawerOpened} onClose={this.onDrawerToggle}>
+          <DrawerContent client={this.state.client}/>
+        </Drawer>
       </Fragment>
     )
   }

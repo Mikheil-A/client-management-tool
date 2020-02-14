@@ -32,7 +32,7 @@ But I build it in React later just for the sake of learning and practising React
         "city": "Tbilisi",
         "address": "address"
       },
-      "photo": ""
+      "photo": "https://randomuser.me/api/portraits/men/93.jpg"
     },
     {
       "id": 2,
@@ -51,7 +51,7 @@ But I build it in React later just for the sake of learning and practising React
         "city": "Vancouver",
         "address": "Howe St, Vancouver, BC VZS 2S8"
       },
-      "photo": ""
+      "photo": "https://randomuser.me/api/portraits/women/92.jpg"
     },
     {
       "id": 3,
@@ -70,7 +70,7 @@ But I build it in React later just for the sake of learning and practising React
         "city": "Toronto",
         "address": "Howe St, BC VZS 2S8"
       },
-      "photo": ""
+      "photo": "https://randomuser.me/api/portraits/women/91.jpg"
     },
     {
       "id": 4,
@@ -89,7 +89,7 @@ But I build it in React later just for the sake of learning and practising React
         "city": "Vancouver",
         "address": "Howe St, Vancouver, BC VZS 2S8"
       },
-      "photo": ""
+      "photo": "https://randomuser.me/api/portraits/men/90.jpg"
     }
   ],
 
