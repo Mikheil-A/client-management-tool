@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/READ.ME.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +23,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MSDA/lawyers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,7 +62,7 @@
       <workItem from="1579725223228" duration="203000" />
       <workItem from="1579791143491" duration="850000" />
       <workItem from="1579856286922" duration="8247000" />
-      <workItem from="1581668833667" duration="10646000" />
+      <workItem from="1581668833667" duration="15287000" />
     </task>
     <servers />
   </component>
@@ -80,5 +81,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2930" y="397" key="FileChooserDialogImpl" timestamp="1581684214920">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2930" y="397" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581684214920" />
   </component>
 </project>

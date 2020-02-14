@@ -1,4 +1,8 @@
-import {ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT, ADD_ACCOUNT, EDIT_ACCOUNT, REMOVE_ACCOUNT} from "./actionTypes";
+import {
+  ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT, ADD_ACCOUNT,
+  EDIT_ACCOUNT, REMOVE_ACCOUNT,
+  DRAWER_OPEN_STATE_CHANGE
+} from "./actionTypes";
 
 
 export const addClient = data => ({
@@ -41,5 +45,12 @@ export const removeAccount = id => ({
   type: REMOVE_ACCOUNT,
   payload: {
     id
+  }
+});
+
+export const drawerOpenStateChange = drawerOpenState => ({
+  type: DRAWER_OPEN_STATE_CHANGE,
+  payload: {
+    drawerOpenState
   }
 });

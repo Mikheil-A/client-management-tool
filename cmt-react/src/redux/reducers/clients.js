@@ -2,7 +2,7 @@ import {ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT} from "../actions/actionTypes";
 
 
 const initialState = {
-  clients: []
+  clients: ['client0']
 };
 
 

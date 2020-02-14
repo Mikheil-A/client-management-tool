@@ -2,7 +2,7 @@ import {ADD_ACCOUNT, EDIT_ACCOUNT, REMOVE_ACCOUNT} from "../actions/actionTypes"
 
 
 const initialState = {
-  accounts: []
+  accounts: ['test']
 };
 
 
@@ -12,7 +12,10 @@ export default (state = initialState, action) => {
 
       console.log(action);
 
-      return {};
+      return [
+        ...state.accounts,
+        action.payload
+      ];
     }
     case EDIT_ACCOUNT: {
 

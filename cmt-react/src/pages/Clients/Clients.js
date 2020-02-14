@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import './Clients.scss';
 import {jsonServerInstance as axios} from '../../axios';
 import {connect} from "react-redux";
-import {addClient} from "../../redux/actions/actions";
+import {addClient, addAccount, drawerOpenStateChange} from "../../redux/actions/actions";
 import Grid from "../../components/Grid/Grid";
 import GridHeader from "../../components/GridHeader/GridHeader";
 import Drawer from '@material-ui/core/Drawer';
@@ -14,8 +14,8 @@ class Clients extends Component {
     super(props);
 
     this.state = {
-      isDrawerOpened: false,
-      clients: [],
+      // isDrawerOpened: false,
+      // clients: [],
       client: {}
     }
   }
@@ -30,7 +30,7 @@ class Clients extends Component {
     axios.get('/clients')
       .then(res => {
         // this.storeClientsToComponentLevelState(res);
-        this.storeClientsToReduxStore(res);
+        // this.storeClientsToReduxStore(res);
       })
   };
 
@@ -54,12 +54,23 @@ class Clients extends Component {
   };
 
   onDrawerToggle = (clickedRow) => {
-    this.setState({
-      ...this.state,
-      client: clickedRow,
-      isDrawerOpened: !this.state.isDrawerOpened
-    });
+    // this.setState({
+    //   ...this.state,
+    //   client: clickedRow,
+    //   isDrawerOpened: !this.state.isDrawerOpened
+    // });
+
+    this.props.drawerOpenStateChange('afwfw');
   };
+
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log('>>>', prevProps.drawerOpenStateChange);
+    if (prevProps.drawerOpenStateChange !== this.props.drawerOpenStateChange) {
+      // Do whatever you want
+      console.log('sheicvala blaid');
+    }
+  }
 
 
   render() {
@@ -68,7 +79,11 @@ class Clients extends Component {
         <GridHeader/>
         {this.props.clients.length > 0 ? <Grid data={this.props.clients} onDriverOpen={this.onDrawerToggle}/> : null}
 
-        <Drawer anchor="right" open={this.state.isDrawerOpened} onClose={this.onDrawerToggle}>
+        {this.props.drawerOpenState ? <h1>---{this.props.drawerOpenState}====</h1> : <h1>it's null</h1>}
+
+        <h1> == {this.props.clients[0]} ===</h1>
+
+        <Drawer anchor="right" open={this.props.drawerOpenState} onClose={this.onDrawerToggle}>
           <DrawerContent client={this.state.client}/>
         </Drawer>
       </Fragment>
@@ -80,12 +95,16 @@ class Clients extends Component {
 // const mapStateToProps = null;
 const mapStateToProps = state => {
   return {
-    clients: state.clients
+    accounts: state.accounts,
+    clients: state.clients,
+    drawerOpenState: state.drawerOpenState
   };
 };
 
 const mapDispatchToProps = {
-  addClient: addClient
+  addAccount: addAccount,
+  addClient: addClient,
+  drawerOpenStateChange: drawerOpenStateChange
 };
 
 export default connect(
