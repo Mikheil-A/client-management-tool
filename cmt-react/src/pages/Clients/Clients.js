@@ -70,7 +70,9 @@ class Clients extends Component {
         <GridHeader onDialogOpen={this.onDialogToggle}/>
 
         {this.props.clients.length > 0
-          ? <Grid data={this.props.clients} onDriverOpen={this.onDrawerToggle} onDialogOpen={this.onDialogToggle}/>
+          ? <Grid data={this.props.clients}
+                  onDriverOpen={this.onDrawerToggle}
+                  onDialogOpen={this.onDialogToggle}/>
           : null}
 
         {this.props.accounts.accounts.length > 0
@@ -86,8 +88,9 @@ class Clients extends Component {
           <DrawerContent client={this.state.client}/>
         </Drawer>
 
-        <Dialog onClose={this.onDialogToggle} aria-labelledby="simple-dialog-title"
-                open={this.props.modals.dialogOpenState}>
+        <Dialog onClose={this.onDialogToggle}
+                // open={this.props.modals.dialogOpenState}>
+                open={true}>
           <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
           <h1>this is a test dialog</h1>
           <AddOrEditClientDialog/>

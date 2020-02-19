@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmt-react/src/components/confirmDeletion/confirmDeletion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmt-react/src/components/confirmDeletion/confirmDeletion.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/Grid/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/Grid/Grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/GridHeader/GridHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/GridHeader/GridHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/modals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +38,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -72,7 +70,8 @@
       <workItem from="1579856286922" duration="8247000" />
       <workItem from="1581668833667" duration="15390000" />
       <workItem from="1581687225515" duration="1301000" />
-      <workItem from="1582095997050" duration="10279000" />
+      <workItem from="1582095997050" duration="10395000" />
+      <workItem from="1582114610855" duration="4934000" />
     </task>
     <servers />
   </component>
@@ -100,18 +99,22 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="606" y="220" key="FileChooserDialogImpl" timestamp="1582099549160">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2930" y="397" key="FileChooserDialogImpl" timestamp="1582116150485">
+      <screen x="1920" y="0" width="2560" height="1400" />
     </state>
-    <state x="2930" y="397" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581687260347" />
+    <state x="2930" y="397" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1582116150485" />
     <state x="606" y="220" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582099549160" />
     <state x="2592" y="257" key="SettingsEditor" timestamp="1581687624750">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2592" y="257" key="SettingsEditor/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581687624750" />
-    <state x="2805" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1582095999306">
+    <state x="2805" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1582114659660">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
-    <state x="2805" y="482" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1582095999306" />
+    <state x="2805" y="482" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1582114659660" />
+    <state x="2979" y="597" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582118602820">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2979" y="597" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1582118602820" />
   </component>
 </project>
