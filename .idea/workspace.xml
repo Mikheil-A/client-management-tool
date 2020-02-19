@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/Grid/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/Grid/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/GridHeader/GridHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/GridHeader/GridHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/accounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/accounts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/clients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/modals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +43,14 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\components\Footer" />
+      <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\pages" />
       <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\components\Table" />
       <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src\components\Footer" />
-      <recent name="D:\My Folder\Repos\Freelance\client-management-tool\cmt-react\src" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -69,7 +72,7 @@
       <workItem from="1579856286922" duration="8247000" />
       <workItem from="1581668833667" duration="15390000" />
       <workItem from="1581687225515" duration="1301000" />
-      <workItem from="1582095997050" duration="5840000" />
+      <workItem from="1582095997050" duration="10279000" />
     </task>
     <servers />
   </component>

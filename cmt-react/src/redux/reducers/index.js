@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
 import clients from "./clients";
 import accounts from "./accounts";
-import drawer from "./drawer";
+import modals from "./modals";
 
-export default combineReducers({clients, accounts, drawer});
+export default combineReducers({clients, accounts, modals});

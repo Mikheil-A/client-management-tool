@@ -5,12 +5,12 @@ import Fab from '@material-ui/core/Fab';
 import './GridHeader.scss';
 
 
-const GridHeader = () => {
+const GridHeader = (props) => {
   return (
     <div className="grid-header">
       <Tooltip title="Add Client" aria-label="add">
         <Fab color="primary" size="medium">
-          <AddIcon fontSize="large"/>
+          <AddIcon fontSize="large" onClick={props.onDialogOpen}/>
         </Fab>
       </Tooltip>
     </div>

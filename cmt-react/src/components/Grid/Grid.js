@@ -17,7 +17,7 @@ const Grid = (props) => {
   return (
     <div>
       <TableContainer component={Paper}>
-        <Table>
+        <Table size="small">
 
           <TableHead>
             <TableRow>
@@ -47,7 +47,7 @@ const Grid = (props) => {
                     <IconButton color="primary" component="span" onClick={() => props.onDriverOpen(row)}>
                       <VisibilityIcon fontSize="small"/>
                     </IconButton>
-                    <IconButton color="primary" component="span">
+                    <IconButton color="primary" component="span" onClick={props.onDialogOpen}>
                       <EditIcon fontSize="small"/>
                     </IconButton>
                     <IconButton color="primary" component="span">
