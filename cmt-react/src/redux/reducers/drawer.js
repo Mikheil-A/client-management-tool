@@ -1,15 +1,14 @@
-import {DRAWER_OPEN_STATE_CHANGE} from "../actions/actionTypes";
+import {CHANGE_DRAWER_OPEN_STATE} from "../actions/actionTypes";
 
 
 const initialState = {
-  drawerOpenState: 'tsetaeawga'
+  drawerOpenState: false,
 };
 
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case DRAWER_OPEN_STATE_CHANGE: {
-      console.log('action payload', action.payload);
+    case CHANGE_DRAWER_OPEN_STATE: {
       return action.payload;
     }
     default:

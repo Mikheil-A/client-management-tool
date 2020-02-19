@@ -2,7 +2,7 @@ import {ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT} from "../actions/actionTypes";
 
 
 const initialState = {
-  clients: ['client0']
+  clients: []
 };
 
 
@@ -15,10 +15,7 @@ export default (state = initialState, action) => {
       ];
     }
     case EDIT_CLIENT: {
-
       console.log(action);
-
-
       return {};
     }
     case REMOVE_CLIENT: {

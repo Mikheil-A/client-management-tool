@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/accounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/accounts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/clients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/drawer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Others/25-react-projects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MSDA/mm-webapp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,7 +68,8 @@
       <workItem from="1579791143491" duration="850000" />
       <workItem from="1579856286922" duration="8247000" />
       <workItem from="1581668833667" duration="15390000" />
-      <workItem from="1581687225515" duration="498000" />
+      <workItem from="1581687225515" duration="1301000" />
+      <workItem from="1582095997050" duration="5840000" />
     </task>
     <servers />
   </component>
@@ -93,13 +97,18 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2930" y="397" key="FileChooserDialogImpl" timestamp="1581687260347">
-      <screen x="1920" y="0" width="2560" height="1400" />
+    <state x="606" y="220" key="FileChooserDialogImpl" timestamp="1582099549160">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="2930" y="397" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581687260347" />
+    <state x="606" y="220" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582099549160" />
     <state x="2592" y="257" key="SettingsEditor" timestamp="1581687624750">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2592" y="257" key="SettingsEditor/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581687624750" />
+    <state x="2805" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1582095999306">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2805" y="482" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1582095999306" />
   </component>
 </project>

@@ -1,9 +1,11 @@
 import {
   ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT, ADD_ACCOUNT,
   EDIT_ACCOUNT, REMOVE_ACCOUNT,
-  DRAWER_OPEN_STATE_CHANGE
+  CHANGE_DRAWER_OPEN_STATE
 } from "./actionTypes";
 
+
+// Client
 
 export const addClient = data => ({
   type: ADD_CLIENT,
@@ -27,6 +29,8 @@ export const removeClient = id => ({
 });
 
 
+// Account
+
 export const addAccount = data => ({
   type: ADD_ACCOUNT,
   payload: {
@@ -48,8 +52,11 @@ export const removeAccount = id => ({
   }
 });
 
-export const drawerOpenStateChange = drawerOpenState => ({
-  type: DRAWER_OPEN_STATE_CHANGE,
+
+// Drawer
+
+export const changeDrawerOpenState = drawerOpenState => ({
+  type: CHANGE_DRAWER_OPEN_STATE,
   payload: {
     drawerOpenState
   }

@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import './Clients.scss';
 import {jsonServerInstance as axios} from '../../axios';
 import {connect} from "react-redux";
-import {addClient, addAccount, drawerOpenStateChange} from "../../redux/actions/actions";
+import {addClient, addAccount, changeDrawerOpenState} from "../../redux/actions/actions";
 import Grid from "../../components/Grid/Grid";
 import GridHeader from "../../components/GridHeader/GridHeader";
 import Drawer from '@material-ui/core/Drawer';
@@ -17,11 +17,10 @@ class Clients extends Component {
       // isDrawerOpened: false,
       // clients: [],
       client: {}
-    }
+    };
   }
 
   componentDidMount() {
-    console.log(this.props.clients);
     this.fetchClients();
   }
 
@@ -53,14 +52,14 @@ class Clients extends Component {
     // setState({...state, [side]: open});
   };
 
-  onDrawerToggle = (clickedRow) => {
+  onDrawerOpenStateToggle = (clickedRow) => {
     // this.setState({
     //   ...this.state,
     //   client: clickedRow,
     //   isDrawerOpened: !this.state.isDrawerOpened
     // });
 
-    this.props.drawerOpenStateChange('afwfw');
+    this.props.changeDrawerOpenState(!this.props.drawer.drawerOpenState);
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -68,28 +67,26 @@ class Clients extends Component {
     if (prevProps.drawerOpenStateChange !== this.props.drawerOpenStateChange) {
       // Do whatever you want
       console.log('sheicvala blaid');
-
-
-
-
     }
   }
 
 
-
-
   render() {
-
-
-
     return (
       <Fragment>
+        <h1>{this.props.drawer.drawerOpenState.toString()}</h1>
+        <button onClick={() => this.onDrawerOpenStateToggle()}>change Drawer open state</button>
+
         <GridHeader/>
         {this.props.clients.length > 0 ? <Grid data={this.props.clients} onDriverOpen={this.onDrawerToggle}/> : null}
 
         {this.props.drawerOpenState ? <h1>---{this.props.drawerOpenState}====</h1> : <h1>it's null</h1>}
 
-        <h1> == {this.props.clients[0]} ===</h1>
+        {this.props.accounts.accounts.length > 0 ? this.props.accounts.accounts.map(account => (
+          <div key={account}>
+            {account}
+          </div>
+        )) : null}
 
         <Drawer anchor="right" open={this.props.drawerOpenState} onClose={this.onDrawerToggle}>
           <DrawerContent client={this.state.client}/>
@@ -105,14 +102,14 @@ const mapStateToProps = state => {
   return {
     accounts: state.accounts,
     clients: state.clients,
-    drawerOpenState: state.drawerOpenState
+    drawer: state.drawer
   };
 };
 
 const mapDispatchToProps = {
   addAccount: addAccount,
   addClient: addClient,
-  drawerOpenStateChange: drawerOpenStateChange
+  changeDrawerOpenState: changeDrawerOpenState
 };
 
 export default connect(
