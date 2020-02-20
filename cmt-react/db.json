@@ -4,7 +4,7 @@
       "id": 1,
       "firstName": "Misho",
       "lastName": "Aleksidze",
-      "gender": "კაცი",
+      "gender": "მამრობითი",
       "pid": "000000000",
       "phone": 555555555,
       "legalAddress": {
@@ -23,7 +23,7 @@
       "id": 2,
       "firstName": "Jennifer",
       "lastName": "Smith",
-      "gender": "ქალი",
+      "gender": "მდედრობითი",
       "pid": "111111111",
       "phone": 544444444,
       "legalAddress": {
@@ -42,7 +42,7 @@
       "id": 3,
       "firstName": "Jane",
       "lastName": "Doe",
-      "gender": "ქალი",
+      "gender": "მდედრობითი",
       "pid": "222222222",
       "phone": 544444444,
       "legalAddress": {
@@ -61,7 +61,7 @@
       "id": 4,
       "firstName": "John",
       "lastName": "Doe",
-      "gender": "კაცი",
+      "gender": "მამრობითი",
       "pid": "999999999",
       "phone": 544444444,
       "legalAddress": {

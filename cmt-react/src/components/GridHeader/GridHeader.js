@@ -9,8 +9,8 @@ const GridHeader = (props) => {
   return (
     <div className="grid-header">
       <Tooltip title="Add Client" aria-label="add">
-        <Fab color="primary" size="medium">
-          <AddIcon fontSize="large" onClick={props.onDialogOpen}/>
+        <Fab color="primary" size="medium" onClick={props.onAddClientDialogOpen}>
+          <AddIcon fontSize="large"/>
         </Fab>
       </Tooltip>
     </div>

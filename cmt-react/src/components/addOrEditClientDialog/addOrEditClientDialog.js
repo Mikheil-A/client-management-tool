@@ -1,47 +1,87 @@
 import './addOrEditClientDialog.scss';
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import TextField from '@material-ui/core/TextField';
-import {useForm} from 'react-hook-form'
+import {useForm, Controller} from 'react-hook-form'
+import MenuItem from '@material-ui/core/MenuItem';
+import Input from '@material-ui/core/Input';
 
 
 // TODO use react hooks here!!!!
 
-const AddOrEditClientDialog = () => {
-  const {register, handleSubmit, watch, errors} = useForm();
+const AddOrEditClientDialog = (props) => {
+  const [gender, setGender] = React.useState('მამრობითი');
+
+  const {register, handleSubmit, watch, errors, control} = useForm();
   const onSubmit = data => {
     console.log(data)
   };
 
   useEffect(() => {
-    console.log('>>>test');
+    // console.log('>>>test');
   }, []);
 
-  console.log(watch('example')); // watch input value by passing the name of it
+  // console.log(watch('example')); // watch input value by passing the name of it
+
+
+  const handleGenderSelect = event => {
+    setGender(event.target.value);
+  };
 
   return (
     <div>
-      <h1>addOrEditClientDialog works!</h1>
+      {/*<h1>addOrEditClientDialog works!</h1>*/}
 
-      <TextField required id="outlined-basic" label="First name" variant="outlined" size="small"/>
-      <TextField error={true} required id="outlined-basic" label="First name" variant="outlined"/>
-      <TextField required id="outlined-basic" label="First name" variant="outlined" defaultValue="Michael Aleksidze"
-                 helperText="this is a hint"/>
+      {/*<TextField error={true} required id="outlined-basic" label="First name" variant="outlined"/>*/}
+      {/*<TextField required id="outlined-basic" label="First name" variant="outlined" defaultValue="Michael Aleksidze"*/}
+      {/*           helperText="this is a hint"/>*/}
 
 
       <hr/>
 
 
-      {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* register your input into the hook by invoking the "register" function */}
-        <input name="example" defaultValue="test" ref={register} />
+        <Controller as={<TextField ref={register({required: true})} variant="outlined" size="small"/>}
+                    name="test" control={control} defaultValue="test" required label="test"/>
 
-        {/* include validation with required or other standard HTML validation rules */}
-        <input name="exampleRequired" ref={register({ required: true })} />
-        {/* errors will return when field validation fails  */}
-        {errors.exampleRequired && <span>This field is required</span>}
 
-        <input type="submit" />
+        {/*<TextField name="pid" defaultValue={props.client.pid} ref={register({required: true})} required*/}
+        {/*           label="pid"*/}
+        {/*           variant="outlined" size="small"/>*/}
+
+        {/*        <TextField name="first name" defaultValue={props.client.firstName} ref={register({required: true})} required
+                   label="First name"
+                   variant="outlined" size="small"/>
+        <TextField name="last name" defaultValue={props.client.lastName} ref={register({required: true})} required
+                   label="last name"
+                   variant="outlined" size="small"/>
+        <TextField
+          select
+          label="Select"
+          value={gender}
+          helperText="Please select your gender"
+          variant="outlined"
+          onChange={handleGenderSelect}
+          size="small"
+        >
+          <MenuItem key="მამრობითი" value="მამრობითი">
+            მამრობითი
+          </MenuItem>
+          <MenuItem key="მდედრობითი" value="მდედრობითი">
+            მდედრობითი
+          </MenuItem>
+        </TextField>
+        <TextField name="phone" defaultValue={props.client.phone} ref={register} required label="phone"
+                   variant="outlined" size="small"/>
+
+        <Input name="tst" defaultValue={props.client.tst} ref={register({required: true})} required
+                   label="tst"
+                   variant="outlined" size="small"/>*/}
+
+        <input name="test name" ref={register({required: true})}/>
+        {/*<input name="exampleRequired" ref={register({required: true})}/>*/}
+        {/*{errors.exampleRequired && <span>This field is required</span>}*/}
+
+        <input type="submit"/>
       </form>
     </div>
   )

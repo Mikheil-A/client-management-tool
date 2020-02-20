@@ -47,7 +47,7 @@ const Grid = (props) => {
                     <IconButton color="primary" component="span" onClick={() => props.onDriverOpen(row)}>
                       <VisibilityIcon fontSize="small"/>
                     </IconButton>
-                    <IconButton color="primary" component="span" onClick={props.onDialogOpen}>
+                    <IconButton color="primary" component="span" onClick={() => props.onEditClientDialogOpen(row)}>
                       <EditIcon fontSize="small"/>
                     </IconButton>
                     <IconButton color="primary" component="span">

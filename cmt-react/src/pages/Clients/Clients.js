@@ -58,21 +58,25 @@ class Clients extends Component {
   };
 
 
-  onDialogToggle = () => {
-    // console.log(222, this.props);
+  onDialogToggle = (clickedClient = null) => {
     this.props.changeDialogOpenState(!this.props.modals.dialogOpenState);
+
+    this.setState({
+      ...this.state,
+      client: clickedClient
+    });
   };
 
 
   render() {
     return (
       <Fragment>
-        <GridHeader onDialogOpen={this.onDialogToggle}/>
+        <GridHeader onAddClientDialogOpen={this.onDialogToggle}/>
 
         {this.props.clients.length > 0
           ? <Grid data={this.props.clients}
                   onDriverOpen={this.onDrawerToggle}
-                  onDialogOpen={this.onDialogToggle}/>
+                  onEditClientDialogOpen={this.onDialogToggle}/>
           : null}
 
         {this.props.accounts.accounts.length > 0
@@ -90,10 +94,10 @@ class Clients extends Component {
 
         <Dialog onClose={this.onDialogToggle}
                 // open={this.props.modals.dialogOpenState}>
-                open={true}>
+          open={true}>
           <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
           <h1>this is a test dialog</h1>
-          <AddOrEditClientDialog/>
+          <AddOrEditClientDialog client={this.state.client}/>
         </Dialog>
       </Fragment>
     )
