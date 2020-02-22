@@ -1,87 +1,92 @@
-/*
 import React, {useState, useEffect, useRef} from "react";
-import {ValidatorForm, TextValidator} from 'react-material-ui-form-validator';*/
-
-import React from 'react';
-import {ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import './addOrEditClientDialog.scss';
+import {useForm, Controller} from 'react-hook-form';
+import {Select, MenuItem, TextField} from "@material-ui/core";
 
 
 // TODO use react hooks here!!!!
 
-// const AddOrEditClientDialog = (props) => {
-class AddOrEditClientDialog extends React.Component {
-  // const [gender, setGender] = React.useState('მამრობითი');
-  // const [addOrEditState, setAddOrEditState] = React.useState('Add');
+const AddOrEditClientDialog = (props) => {
+  const [gender, setGender] = React.useState('მამრობითი');
+  const [addOrEditState, setAddOrEditState] = React.useState('Add');
 
-  state = {
-    pid: '',
+  const {register, handleSubmit, watch, errors, control} = useForm();
+  const onSubmit = data => {
+    console.log('form data>>>', data);
+    console.log('form errors>>>', errors);
   };
 
-  constructor(props) {
-    super(props);
-  }
+  // console.log(watch('example'));
 
-  handleChange = (event) => {
-    const pid = event.target.value;
-    this.setState({pid});
-  };
-
-
-  handleSubmit = e => {
-    console.log('form data >>> ', e, e.target.value)
-  };
-
-  // const formRef = useRef('form');
-
-  /*useEffect(() => {
+  useEffect(() => {
     if (props.client) {
       setAddOrEditState('Edit');
     }
-    console.log('this is a test call');
+    console.log('this is a test call', props);
   }, []);
 
   const handleGenderSelect = event => {
     setGender(event.target.value);
   };
-*/
 
 
-  render() {
-    return (
-      <div className="client-form-container">
-        {/*<h1>{addOrEditState} Client dialog</h1>*/}
+  return (
+    <div className="client-form-container">
+      <h1>{addOrEditState} Client dialog</h1>
 
-        <ValidatorForm
-          ref="form"
-          onSubmit={this.handleSubmit}
-          onError={errors => console.log('form errors >>>>', errors)}>
 
-          <TextValidator
-            label="pid"
-            name="pid"
-            type="text"
-            onChange={this.handleChange}
-            variant="outlined"
-            size="small"
-            // required
-            // error={true}
-            // defaultValue={props.client ? props.client.pid : null}
-            value={this.state.pid}
-            // value={props.client ? props.client.pid : null}
-            validators={['required']}
-            errorMessages={['this field is required']}
-            helperText="11 digit number."
-          />
-          {/*
-        <TextValidator name="First name"
-                       label="First name"
-                       type="text"
-                       defaultValue={props.client ? props.client.firstName : null}
-          // validators={['required']}
+      <form onSubmit={handleSubmit(onSubmit)}>
+
+        <Controller name="pid" control={control} defaultValue={props.client ? props.client.pid : ''}
+                    required label="pid" helperText="Enter 9 digit number"
+                    as={<TextField ref={register({required: true})} variant="outlined" size="small"/>}/>
+
+        <Controller name="firstName" control={control} type="text"
+                    defaultValue={props.client ? props.client.firstName : ''} label="First name"
+                    as={<TextField ref={register({required: true})} variant="outlined" size="small"/>}/>
+        {errors.firstName && <span>This field is required</span>}
+
+        <Controller name="gender" control={control} defaultValue={props.client ? props.client.gender : "მამრობითი"}
+                    required label="gender"
+                    as={<TextField ref={register({required: true})} select variant="outlined" size="small">
+                      <MenuItem key="მამრობითი" value="მამრობითი">
+                        მამრობითი
+                      </MenuItem>
+                      <MenuItem key="მდედრობითი" value="მდედრობითი">
+                        მდედრობითი
+                      </MenuItem>
+                    </TextField>}
+        />
+
+        <input name="test" ref={register({required: true})}/>
+        {errors.test && <span>This field is required</span>}
+
+        <input type="submit"/>
+      </form>
+
+
+      {/*
+      <ValidatorForm
+        ref="form"
+        onSubmit={handleSubmit}
+        onError={errors => console.log('form errors >>>>', errors)}>
+
+        <TextValidator
+          label="pid"
+          name="pid"
+          type="text"
+          variant="outlined"
+          size="small"
           // required
-                       variant="outlined"
-                       size="small"/>
+          // error={true}
+          // defaultValue={props.client ? props.client.pid : null}
+          value={this.state.pid}
+          // value={props.client ? props.client.pid : null}
+          validators={['required']}
+          errorMessages={['this field is required']}
+          helperText="11 digit number."
+        />
+
 
         <TextValidator name="Last name"
                        label="Last name"
@@ -98,9 +103,9 @@ class AddOrEditClientDialog extends React.Component {
           // validators={['required']}
           // required
                        variant="outlined"
-                       size="small"/>*/}
+                       size="small"/>
 
-          {/*  <TextField
+        <TextField
           select
           label="Select"
           value={gender}
@@ -116,15 +121,15 @@ class AddOrEditClientDialog extends React.Component {
             მდედრობითი
           </MenuItem>
         </TextField>
+
+      <button type="submit">Submit</button>
+
+    </ValidatorForm>
         */}
 
-          <button type="submit">Submit</button>
 
-        </ValidatorForm>
-
-      </div>
-    )
-  }
-}
+    </div>
+  )
+};
 
 export default AddOrEditClientDialog;

@@ -7,7 +7,6 @@ import Grid from "../../components/Grid/Grid";
 import GridHeader from "../../components/GridHeader/GridHeader";
 import Drawer from '@material-ui/core/Drawer';
 import DrawerContent from "../../components/DrawerContent/DrawerContent";
-import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 import AddOrEditClientDialog from "../../components/addOrEditClientDialog/addOrEditClientDialog";
 
@@ -19,7 +18,8 @@ class Clients extends Component {
     this.state = {
       // isDrawerOpened: false,
       // clients: [],
-      client: {}
+      // client: {}
+      client: null
     };
   }
 
@@ -93,8 +93,8 @@ class Clients extends Component {
         </Drawer>
 
         <Dialog onClose={this.onDialogToggle}
-                open={this.props.modals.dialogOpenState}>
-          {/*open={true}>*/}
+          // open={this.props.modals.dialogOpenState}>
+                open={true}>
           <AddOrEditClientDialog client={this.state.client}/>
         </Dialog>
       </Fragment>
