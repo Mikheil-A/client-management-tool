@@ -58,13 +58,13 @@ class Clients extends Component {
   };
 
 
-  onDialogToggle = (clickedClient = null) => {
-    this.props.changeDialogOpenState(!this.props.modals.dialogOpenState);
-
+  onDialogToggle = (clickedClient) => {
+    console.log(clickedClient);
     this.setState({
       ...this.state,
       client: clickedClient
     });
+    this.props.changeDialogOpenState(!this.props.modals.dialogOpenState);
   };
 
 
@@ -93,10 +93,8 @@ class Clients extends Component {
         </Drawer>
 
         <Dialog onClose={this.onDialogToggle}
-                // open={this.props.modals.dialogOpenState}>
-          open={true}>
-          <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
-          <h1>this is a test dialog</h1>
+                open={this.props.modals.dialogOpenState}>
+          {/*open={true}>*/}
           <AddOrEditClientDialog client={this.state.client}/>
         </Dialog>
       </Fragment>
