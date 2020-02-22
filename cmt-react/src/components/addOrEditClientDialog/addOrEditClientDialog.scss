@@ -1,3 +1,31 @@
 .client-form-container {
 	padding: 12px 24px;
 }
+
+
+
+.my-custom-input {
+	label.Mui-focused {
+		color: red;
+	}
+
+	.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+		border-color: red !important;
+	}
+
+	.MuiOutlinedInput-root {
+		fieldset {
+			border-color: red,
+		}
+
+		&:hover {
+			fieldset {
+				border-color: red;
+			}
+		}
+
+		&.Mui-focused fieldset {
+			border-color: red,
+		}
+	}
+}

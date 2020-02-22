@@ -92,10 +92,10 @@ class Clients extends Component {
           <DrawerContent client={this.state.client}/>
         </Drawer>
 
+        <AddOrEditClientDialog client={this.state.client}/>
         <Dialog onClose={this.onDialogToggle}
-          // open={this.props.modals.dialogOpenState}>
-                open={true}>
-          <AddOrEditClientDialog client={this.state.client}/>
+                open={this.props.modals.dialogOpenState}>
+          {/*open={true}>*/}
         </Dialog>
       </Fragment>
     )
