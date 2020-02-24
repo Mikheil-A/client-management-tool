@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/GridHeader/GridHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/GridHeader/GridHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" afterDir="false" />
@@ -70,7 +72,9 @@
       <workItem from="1582095997050" duration="10395000" />
       <workItem from="1582114610855" duration="4967000" />
       <workItem from="1582203865959" duration="5948000" />
-      <workItem from="1582352821259" duration="28093000" />
+      <workItem from="1582352821259" duration="28139000" />
+      <workItem from="1582436553283" duration="602000" />
+      <workItem from="1582531890979" duration="8830000" />
     </task>
     <servers />
   </component>
@@ -107,11 +111,12 @@
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2592" y="257" key="SettingsEditor/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1581687624750" />
-    <state x="531" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1582352823092">
+    <state x="531" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1582531891832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="531" y="284" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.2560.1400@0.0.1536.824" timestamp="1582531891832" />
     <state x="2805" y="482" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1582203867456" />
-    <state x="531" y="284" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582352823092" />
+    <state x="531" y="284" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582436553846" />
     <state x="2979" y="597" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582204463953">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
