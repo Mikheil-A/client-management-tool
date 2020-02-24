@@ -2,7 +2,13 @@ import React, {Component, Fragment} from 'react';
 import './Clients.scss';
 import {jsonServerInstance as axios} from '../../axios';
 import {connect} from "react-redux";
-import {addClient, addAccount, changeDrawerOpenState, changeDialogOpenState} from "../../redux/actions/actions";
+import {
+  addClient,
+  addAccount,
+  changeDrawerOpenState,
+  changeDialogOpenState,
+  changeClientsGridState
+} from "../../redux/actions/actions";
 import Grid from "../../components/Grid/Grid";
 import GridHeader from "../../components/GridHeader/GridHeader";
 import Drawer from '@material-ui/core/Drawer';
@@ -37,6 +43,7 @@ class Clients extends Component {
       .then(res => {
         // this.storeClientsToComponentLevelState(res);
         this.storeClientsToReduxStore(res);
+        this.props.changeClientsGridState(false);
       })
   };
 
@@ -71,6 +78,11 @@ class Clients extends Component {
     this.props.changeDialogOpenState(!this.props.modals.dialogOpenState);
   };
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps.grids.shouldClientsGridUpdate !== this.props.grids.shouldClientsGridUpdate && this.props.grids.shouldClientsGridUpdate) {
+      this.fetchClients();
+    }
+  }
 
   render() {
     return (
@@ -111,7 +123,8 @@ const mapStateToProps = state => {
   return {
     accounts: state.accounts,
     clients: state.clients,
-    modals: state.modals
+    modals: state.modals,
+    grids: state.grids
   };
 };
 
@@ -119,7 +132,8 @@ const mapDispatchToProps = {
   addAccount: addAccount,
   addClient: addClient,
   changeDrawerOpenState: changeDrawerOpenState,
-  changeDialogOpenState: changeDialogOpenState
+  changeDialogOpenState: changeDialogOpenState,
+  changeClientsGridState: changeClientsGridState
 };
 
 export default connect(

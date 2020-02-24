@@ -4,14 +4,16 @@ import {useForm, Controller, ErrorMessage} from 'react-hook-form';
 import {MenuItem, TextField, Button, CircularProgress} from "@material-ui/core";
 import {jsonServerInstance as axios} from '../../axios';
 import {connect, useDispatch, useSelector} from "react-redux";
-import {changeDialogOpenState} from "../../redux/actions/actions";
+import {changeDialogOpenState, changeClientsGridState} from "../../redux/actions/actions";
 
 
 const AddOrEditClientDialog = (props) => {
   const [addOrEditState, setAddOrEditState] = React.useState('Add');
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  const isDialogOpened = useSelector(state => state.modals.dialogOpenState);
+  const {isDialogOpened} = useSelector(state => ({
+    isDialogOpened: state.modals.dialogOpenState
+  }));
   const dispatch = useDispatch();
 
   const {register, handleSubmit, watch, errors, control, formState} = useForm();
@@ -20,7 +22,7 @@ const AddOrEditClientDialog = (props) => {
     console.log('form data>>>', data);
     console.log('form errors>>>', errors);
 
-    const requestData = {
+    let requestData = {
       firstName: data.firstName,
       lastName: data.lastName,
       gender: data.gender,
@@ -35,24 +37,31 @@ const AddOrEditClientDialog = (props) => {
         country: data.country,
         city: data.city,
         address: data.address
-      },
-      photo: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg`
+      }
     };
 
     switch (addOrEditState) {
       case 'Add': {
+        requestData = {
+          ...requestData,
+          photo: `https://randomuser.me/api/portraits/${requestData.gender === 'მამრობითი' ? 'men' : 'women'}/${Math.floor(Math.random() * 100)}.jpg`
+        };
         axios.post('/clients', requestData)
           .then((res) => {
             setIsSubmitting(false);
-            dispatch(changeDialogOpenState(false));
+            changeDialogAndGridStates();
           });
         break;
       }
       case 'Edit': {
+        requestData = {
+          ...requestData,
+          photo: props.client.photo
+        };
         axios.put(`/clients/${props.client.id}`, requestData)
           .then((res) => {
             setIsSubmitting(false);
-            dispatch(changeDialogOpenState(false));
+            changeDialogAndGridStates();
           });
         break;
       }
@@ -60,6 +69,11 @@ const AddOrEditClientDialog = (props) => {
         break;
       }
     }
+  };
+
+  const changeDialogAndGridStates = () => {
+    dispatch(changeDialogOpenState(false));
+    dispatch(changeClientsGridState(true));
   };
 
 
@@ -231,7 +245,7 @@ const AddOrEditClientDialog = (props) => {
             {isSubmitting && <CircularProgress color="secondary"/>}
             Submit
           </Button>
-          {/*<button onClick={testClick}>Log errors</button>*/}
+          {/*<button onClick={testClick}>Click me!</button>*/}
           {/*<pre>{JSON.stringify(formState, null, 2)}</pre>*/}
         </div>
       </form>
@@ -244,7 +258,10 @@ const mapStateToProps = state => ({
   modals: state.modals
 });
 
-const mapDispatchToProps = {changeDialogOpenState};
+const mapDispatchToProps = {
+  changeClientsGridState,
+  changeDialogOpenState
+};
 
 // export default AddOrEditClientDialog;
 export default connect(mapStateToProps, mapDispatchToProps)(AddOrEditClientDialog);

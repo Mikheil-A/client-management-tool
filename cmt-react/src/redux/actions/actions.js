@@ -1,7 +1,8 @@
 import {
   ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT, ADD_ACCOUNT,
   EDIT_ACCOUNT, REMOVE_ACCOUNT,
-  CHANGE_DRAWER_OPEN_STATE, CHANGE_DIALOG_OPEN_STATE
+  CHANGE_DRAWER_OPEN_STATE, CHANGE_DIALOG_OPEN_STATE,
+  CHANGE_CLIENTS_GRID_STATE
 } from "./actionTypes";
 
 
@@ -66,5 +67,15 @@ export const changeDialogOpenState = dialogOpenState => ({
   type: CHANGE_DIALOG_OPEN_STATE,
   payload: {
     dialogOpenState
+  }
+});
+
+
+// Grids
+
+export const changeClientsGridState = gridState => ({
+  type: CHANGE_CLIENTS_GRID_STATE,
+  payload: {
+    gridState
   }
 });

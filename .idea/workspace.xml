@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/grids.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/addOrEditClientDialog/addOrEditClientDialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/clients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +78,7 @@
       <workItem from="1582203865959" duration="5948000" />
       <workItem from="1582352821259" duration="28139000" />
       <workItem from="1582436553283" duration="602000" />
-      <workItem from="1582531890979" duration="14299000" />
+      <workItem from="1582531890979" duration="18752000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_CLIENT: {
       return [
-        ...state.clients,
+        // ...state.clients,
         ...action.payload.data.data
       ];
     }
