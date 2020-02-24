@@ -3,11 +3,16 @@ import './addOrEditClientDialog.scss';
 import {useForm, Controller, ErrorMessage} from 'react-hook-form';
 import {MenuItem, TextField, Button, CircularProgress} from "@material-ui/core";
 import {jsonServerInstance as axios} from '../../axios';
+import {connect, useDispatch, useSelector} from "react-redux";
+import {changeDialogOpenState} from "../../redux/actions/actions";
 
 
 const AddOrEditClientDialog = (props) => {
   const [addOrEditState, setAddOrEditState] = React.useState('Add');
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+  const isDialogOpened = useSelector(state => state.modals.dialogOpenState);
+  const dispatch = useDispatch();
 
   const {register, handleSubmit, watch, errors, control, formState} = useForm();
   const onSubmit = data => {
@@ -39,6 +44,7 @@ const AddOrEditClientDialog = (props) => {
         axios.post('/clients', requestData)
           .then((res) => {
             setIsSubmitting(false);
+            dispatch(changeDialogOpenState(false));
           });
         break;
       }
@@ -46,6 +52,7 @@ const AddOrEditClientDialog = (props) => {
         axios.put(`/clients/${props.client.id}`, requestData)
           .then((res) => {
             setIsSubmitting(false);
+            dispatch(changeDialogOpenState(false));
           });
         break;
       }
@@ -58,6 +65,8 @@ const AddOrEditClientDialog = (props) => {
 
   useEffect(() => {
     console.log('props >>>', props);
+    console.log(isDialogOpened);
+
     if (props.client.pid) {
       setAddOrEditState('Edit');
     }
@@ -230,4 +239,12 @@ const AddOrEditClientDialog = (props) => {
   )
 };
 
-export default AddOrEditClientDialog;
+
+const mapStateToProps = state => ({
+  modals: state.modals
+});
+
+const mapDispatchToProps = {changeDialogOpenState};
+
+// export default AddOrEditClientDialog;
+export default connect(mapStateToProps, mapDispatchToProps)(AddOrEditClientDialog);
