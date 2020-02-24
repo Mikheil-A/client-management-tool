@@ -1,7 +1,21 @@
-.client-form-container {
-	padding: 12px 24px;
-}
+.MuiDialog-paperWidthSm {
+	max-width: unset !important;
 
+	.MuiFormControl-root {
+		margin: 8px 12px;
+	}
+
+	.client-form-container {
+		padding: 12px 24px;
+	}
+
+	#submit-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-top: 20px;
+	}
+}
 
 
 /*.my-custom-input {

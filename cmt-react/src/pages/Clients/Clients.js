@@ -27,7 +27,7 @@ class Clients extends Component {
     this.fetchClients();
 
     setTimeout(() => {
-      this.onDialogToggle({});
+      // this.onDialogToggle({});
     }, 400);
   }
 

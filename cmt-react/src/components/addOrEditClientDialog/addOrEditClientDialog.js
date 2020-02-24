@@ -1,18 +1,58 @@
 import React, {useState, useEffect, useRef} from "react";
 import './addOrEditClientDialog.scss';
 import {useForm, Controller, ErrorMessage} from 'react-hook-form';
-import {Select, MenuItem, TextField, Input, FormControl, InputLabel} from "@material-ui/core";
+import {MenuItem, TextField, Button, CircularProgress} from "@material-ui/core";
+import {jsonServerInstance as axios} from '../../axios';
 
-
-// TODO use react hooks here!!!!
 
 const AddOrEditClientDialog = (props) => {
   const [addOrEditState, setAddOrEditState] = React.useState('Add');
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const {register, handleSubmit, watch, errors, control, formState} = useForm();
   const onSubmit = data => {
+    setIsSubmitting(true);
     console.log('form data>>>', data);
     console.log('form errors>>>', errors);
+
+    const requestData = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      gender: data.gender,
+      pid: data.pid,
+      phone: data.phone,
+      legalAddress: {
+        country: data.country,
+        city: data.city,
+        address: data.address
+      },
+      actualAddress: {
+        country: data.country,
+        city: data.city,
+        address: data.address
+      },
+      photo: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg`
+    };
+
+    switch (addOrEditState) {
+      case 'Add': {
+        axios.post('/clients', requestData)
+          .then((res) => {
+            setIsSubmitting(false);
+          });
+        break;
+      }
+      case 'Edit': {
+        axios.put(`/clients/${props.client.id}`, requestData)
+          .then((res) => {
+            setIsSubmitting(false);
+          });
+        break;
+      }
+      default: {
+        break;
+      }
+    }
   };
 
 
@@ -22,6 +62,7 @@ const AddOrEditClientDialog = (props) => {
       setAddOrEditState('Edit');
     }
   }, []);
+
 
   const testClick = () => {
     console.log('zzzz', errors);
@@ -76,6 +117,24 @@ const AddOrEditClientDialog = (props) => {
                       name="firstName"
                       message="This is required"/>*/}
 
+        <TextField
+          name="lastName"
+          error={(formState.touched.lastName && watch('lastName') === '') || errors.lastName}
+          defaultValue={props.client.lastName}
+          helperText={formState.touched.lastName && watch('lastName') === '' ? 'You must enter first name'
+            : errors.lastName ? errors.lastName.message : ''}
+          type="text"
+          label="Last name"
+          inputRef={register({
+            required: 'First name is required',
+            minLength: {value: 2, message: 'მინიმუმ 2 სიმბოლო'},
+            maxLength: {value: 50, message: 'მაქსიმუმ 50 სიმბოლო'}
+          })}
+          variant="outlined" size="small"
+        />
+
+        <br/>
+
         <Controller
           as={
             <TextField select variant="outlined" size="small" label="gender"
@@ -112,75 +171,61 @@ const AddOrEditClientDialog = (props) => {
           variant="outlined" size="small"
         />
 
-        <input type="submit"/>
-        {/*<button onClick={testClick}>Log errors</button>*/}
-        {/*<pre>{JSON.stringify(formState, null, 2)}</pre>*/}
-      </form>
-
-
-      {/*
-      <ValidatorForm
-        ref="form"
-        onSubmit={handleSubmit}
-        onError={errors => console.log('form errors >>>>', errors)}>
-
-        <TextValidator
-          label="pid"
-          name="pid"
-          type="text"
-          variant="outlined"
-          size="small"
-          // required
-          // error={true}
-          // defaultValue={props.client ? props.client.pid : null}
-          value={this.state.pid}
-          // value={props.client ? props.client.pid : null}
-          validators={['required']}
-          errorMessages={['this field is required']}
-          helperText="11 digit number."
-        />
-
-
-        <TextValidator name="Last name"
-                       label="Last name"
-                       type="text"
-                       defaultValue={props.client ? props.client.lastName : null}
-          // validators={['required']}
-          // required
-                       variant="outlined"
-                       size="small"/>
-
-        <TextValidator name="Phone"
-                       label="Phone"
-                       defaultValue={props.client ? props.client.phone : null}
-          // validators={['required']}
-          // required
-                       variant="outlined"
-                       size="small"/>
+        <br/>
 
         <TextField
-          select
-          label="Select"
-          value={gender}
-          helperText="Please select your gender"
-          variant="outlined"
-          onChange={handleGenderSelect}
-          size="small"
-        >
-          <MenuItem key="მამრობითი" value="მამრობითი">
-            მამრობითი
-          </MenuItem>
-          <MenuItem key="მდედრობითი" value="მდედრობითი">
-            მდედრობითი
-          </MenuItem>
-        </TextField>
+          name="country"
+          error={(formState.touched.country && watch('country') === '') || errors.country}
+          defaultValue={props.client.legalAddress ? props.client.legalAddress.country : ''}
+          helperText={formState.touched.country && watch('country') === '' ? 'You must enter country'
+            : errors.country ? errors.country.message : ''}
+          type="text"
+          label="Country"
+          inputRef={register({
+            required: 'Country is required'
+          })}
+          variant="outlined" size="small"
+        />
 
-      <button type="submit">Submit</button>
+        <TextField
+          name="city"
+          error={(formState.touched.city && watch('city') === '') || errors.city}
+          defaultValue={props.client.legalAddress ? props.client.legalAddress.city : ''}
+          helperText={formState.touched.city && watch('city') === '' ? 'You must enter city'
+            : errors.city ? errors.country.message : ''}
+          type="text"
+          label="City"
+          inputRef={register({
+            required: 'City is required'
+          })}
+          variant="outlined" size="small"
+        />
 
-    </ValidatorForm>
-        */}
+        <TextField
+          name="address"
+          error={(formState.touched.address && watch('address') === '') || errors.address}
+          defaultValue={props.client.legalAddress ? props.client.legalAddress.address : ''}
+          helperText={formState.touched.address && watch('address') === '' ? 'You must enter address'
+            : errors.address ? errors.country.message : ''}
+          type="text"
+          label="Address"
+          inputRef={register({
+            required: 'Address is required'
+          })}
+          variant="outlined" size="small"
+        />
 
+        <br/>
 
+        <div id="submit-container">
+          <Button variant="contained" color="primary" type="submit">
+            {isSubmitting && <CircularProgress color="secondary"/>}
+            Submit
+          </Button>
+          {/*<button onClick={testClick}>Log errors</button>*/}
+          {/*<pre>{JSON.stringify(formState, null, 2)}</pre>*/}
+        </div>
+      </form>
     </div>
   )
 };
