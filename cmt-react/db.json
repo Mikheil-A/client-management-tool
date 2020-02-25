@@ -1,11 +1,12 @@
 {
   "clients": [
     {
-      "firstName": "Mishooo",
+      "id": 1,
+      "firstName": "Misho",
       "lastName": "Aleksidze",
-      "gender": "კაცი",
+      "gender": "მამრობითი",
       "pid": "00000000000",
-      "phone": "555555555",
+      "phone": 555555555,
       "legalAddress": {
         "country": "Georgia",
         "city": "Gori",
@@ -13,13 +14,89 @@
       },
       "actualAddress": {
         "country": "Georgia",
-        "city": "Gori",
+        "city": "Tbilisi",
         "address": "address"
       },
-      "photo": "https://randomuser.me/api/portraits/men/93.jpg",
-      "id": 1
+      "photo": "https://randomuser.me/api/portraits/men/93.jpg"
+    },
+    {
+      "id": 2,
+      "firstName": "Jennifer",
+      "lastName": "Smith",
+      "gender": "მდედრობითი",
+      "pid": "11111111111",
+      "phone": 544444444,
+      "legalAddress": {
+        "country": "USA",
+        "city": "San Jose",
+        "address": "str 1"
+      },
+      "actualAddress": {
+        "country": "Canada",
+        "city": "Vancouver",
+        "address": "Howe St, Vancouver, BC VZS 2S8"
+      },
+      "photo": "https://randomuser.me/api/portraits/women/92.jpg"
+    },
+    {
+      "id": 3,
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "gender": "მდედრობითი",
+      "pid": "22222222222",
+      "phone": 544444444,
+      "legalAddress": {
+        "country": "USA",
+        "city": "Delaware",
+        "address": "str 2"
+      },
+      "actualAddress": {
+        "country": "Canada",
+        "city": "Toronto",
+        "address": "Howe St, BC VZS 2S8"
+      },
+      "photo": "https://randomuser.me/api/portraits/women/91.jpg"
+    },
+    {
+      "id": 4,
+      "firstName": "John",
+      "lastName": "Doe",
+      "gender": "მამრობითი",
+      "pid": "33333333333",
+      "phone": 544444444,
+      "legalAddress": {
+        "country": "Georgia",
+        "city": "Tbilisi",
+        "address": "str 1"
+      },
+      "actualAddress": {
+        "country": "Canada",
+        "city": "Vancouver",
+        "address": "Howe St, Vancouver, BC VZS 2S8"
+      },
+      "photo": "https://randomuser.me/api/portraits/men/90.jpg"
+    },
+    {
+      "id": 5,
+      "firstName": "Charles",
+      "lastName": "Chaplin",
+      "gender": "მამრობითი",
+      "pid": "44444444444",
+      "phone": 542344444,
+      "legalAddress": {
+        "country": "UK",
+        "city": "London",
+        "address": "Chaplin Avenue 1"
+      },
+      "actualAddress": {
+        "country": "UK",
+        "city": "London",
+        "address": "Howe St, Vancouver, BC VZS 2S8"
+      },
+      "photo": "https://randomuser.me/api/portraits/men/32.jpg"
     }
   ],
+
   "accounts": [
     {
       "id": 1,

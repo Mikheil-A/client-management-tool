@@ -19,7 +19,7 @@ But I build it in React later just for the sake of learning and practising React
       "id": 1,
       "firstName": "Misho",
       "lastName": "Aleksidze",
-      "gender": "კაცი",
+      "gender": "მამრობითი",
       "pid": "00000000000",
       "phone": 555555555,
       "legalAddress": {
@@ -38,7 +38,7 @@ But I build it in React later just for the sake of learning and practising React
       "id": 2,
       "firstName": "Jennifer",
       "lastName": "Smith",
-      "gender": "ქალი",
+      "gender": "მდედრობითი",
       "pid": "11111111111",
       "phone": 544444444,
       "legalAddress": {
@@ -57,7 +57,7 @@ But I build it in React later just for the sake of learning and practising React
       "id": 3,
       "firstName": "Jane",
       "lastName": "Doe",
-      "gender": "ქალი",
+      "gender": "მდედრობითი",
       "pid": "22222222222",
       "phone": 544444444,
       "legalAddress": {
@@ -76,8 +76,8 @@ But I build it in React later just for the sake of learning and practising React
       "id": 4,
       "firstName": "John",
       "lastName": "Doe",
-      "gender": "კაცი",
-      "pid": "99999999999",
+      "gender": "მამრობითი",
+      "pid": "33333333333",
       "phone": 544444444,
       "legalAddress": {
         "country": "Georgia",
@@ -90,7 +90,26 @@ But I build it in React later just for the sake of learning and practising React
         "address": "Howe St, Vancouver, BC VZS 2S8"
       },
       "photo": "https://randomuser.me/api/portraits/men/90.jpg"
-    }
+    },
+    {
+          "id": 5,
+          "firstName": "Charles",
+          "lastName": "Chaplin",
+          "gender": "მამრობითი",
+          "pid": "44444444444",
+          "phone": 542344444,
+          "legalAddress": {
+            "country": "UK",
+            "city": "London",
+            "address": "Chaplin Avenue 1"
+          },
+          "actualAddress": {
+            "country": "UK",
+            "city": "London",
+            "address": "Howe St, Vancouver, BC VZS 2S8"
+          },
+          "photo": "https://randomuser.me/api/portraits/men/32.jpg"
+        }
   ],
 
   "accounts": [
