@@ -13,9 +13,10 @@ import Grid from "../../components/Grid/Grid";
 import GridHeader from "../../components/GridHeader/GridHeader";
 import Drawer from '@material-ui/core/Drawer';
 import ViewClientDrawer from "../../components/ViewClientDrawer/ViewClientDrawer";
-import Dialog from '@material-ui/core/Dialog';
+import {Dialog, Backdrop} from '@material-ui/core';
 import AddOrEditClientDialog from "../../components/AddOrEditClientDialog/AddOrEditClientDialog";
 import ConfirmDeletionDialog from "../../components/ConfirmDeletionDialog/ConfirmDeletionDialog";
+import {DotLoader} from "react-spinners";
 
 
 class Clients extends Component {
@@ -27,7 +28,8 @@ class Clients extends Component {
       // clients: [],
       // client: {}
       client: null,
-      isConfirmDeletionDialogOpened: false
+      isConfirmDeletionDialogOpened: false,
+      isLoading: false
     };
   }
 
@@ -41,11 +43,21 @@ class Clients extends Component {
 
 
   fetchClients = () => {
+    this.setState({
+      ...this.state,
+      isLoading: true
+    });
+
     axios.get('/clients')
       .then(res => {
         // this.storeClientsToComponentLevelState(res);
         this.storeClientsToReduxStore(res);
         this.props.changeClientsGridState(false);
+
+        this.setState({
+          ...this.state,
+          isLoading: false
+        });
       })
   };
 
@@ -116,6 +128,14 @@ class Clients extends Component {
           {!this.state.isConfirmDeletionDialogOpened && <AddOrEditClientDialog client={this.state.client}/>}
           {this.state.isConfirmDeletionDialogOpened && <ConfirmDeletionDialog client={this.state.client}/>}
         </Dialog>
+
+        <Backdrop open={this.state.isLoading}>
+          {/*"react-spinners - npm": https://www.npmjs.com/package/react-spinners*/}
+          <DotLoader
+            size={100}
+            color={"#b8aeae"}
+          />
+        </Backdrop>
       </Fragment>
     )
   }

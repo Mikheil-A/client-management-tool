@@ -1,12 +1,11 @@
 {
   "clients": [
     {
-      "id": 1,
-      "firstName": "Misho",
+      "firstName": "Mishooo",
       "lastName": "Aleksidze",
       "gender": "კაცი",
       "pid": "00000000000",
-      "phone": 555555555,
+      "phone": "555555555",
       "legalAddress": {
         "country": "Georgia",
         "city": "Gori",
@@ -14,29 +13,11 @@
       },
       "actualAddress": {
         "country": "Georgia",
-        "city": "Tbilisi",
+        "city": "Gori",
         "address": "address"
       },
-      "photo": "https://randomuser.me/api/portraits/men/93.jpg"
-    },
-    {
-      "firstName": "Jenniferrrrr",
-      "lastName": "Smith",
-      "gender": "ქალი",
-      "pid": "11111111111",
-      "phone": "544444444",
-      "legalAddress": {
-        "country": "USA",
-        "city": "San Jose",
-        "address": "str 1"
-      },
-      "actualAddress": {
-        "country": "USA",
-        "city": "San Jose",
-        "address": "str 1"
-      },
-      "photo": "https://randomuser.me/api/portraits/women/92.jpg",
-      "id": 2
+      "photo": "https://randomuser.me/api/portraits/men/93.jpg",
+      "id": 1
     }
   ],
   "accounts": [

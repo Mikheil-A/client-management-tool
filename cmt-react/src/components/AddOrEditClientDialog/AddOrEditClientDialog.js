@@ -19,8 +19,8 @@ const AddOrEditClientDialog = (props) => {
   const {register, handleSubmit, watch, errors, control, formState} = useForm();
   const onSubmit = data => {
     setIsSubmitting(true);
-    console.log('form data>>>', data);
-    console.log('form errors>>>', errors);
+    // console.log('form data>>>', data);
+    // console.log('form errors>>>', errors);
 
     let requestData = {
       firstName: data.firstName,
