@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
-import './addOrEditClientDialog.scss';
+import './AddOrEditClientDialog.scss';
 import {useForm, Controller, ErrorMessage} from 'react-hook-form';
 import {MenuItem, TextField, Button, CircularProgress} from "@material-ui/core";
 import {jsonServerInstance as axios} from '../../axios';

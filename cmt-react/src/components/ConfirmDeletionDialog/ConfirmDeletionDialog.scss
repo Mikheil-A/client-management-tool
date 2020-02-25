@@ -1,0 +1,13 @@
+.confirm-deletion-dialog {
+	padding: 12px 20px;
+
+	#action-buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+
+		button:first-child {
+			margin-right: 12px;
+		}
+	}
+}

@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
-import './DrawerContent.scss';
+import './ViewClientDrawer.scss';
+import {Button} from '@material-ui/core';
 
 
-const DrawerContent = (props) => {
+const ViewClientDrawer = (props) => {
   const [test, setTest] = useState('test');
 
   useEffect(() => {
@@ -13,9 +14,10 @@ const DrawerContent = (props) => {
   return (
     <div>
       {props.client.firstName}
-      drawer content works!teststestes
+
+      <Button variant="contained" color="primary">Create a new account</Button>
     </div>
   )
 };
 
-export default DrawerContent;
+export default ViewClientDrawer;

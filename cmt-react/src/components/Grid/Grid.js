@@ -47,10 +47,10 @@ const Grid = (props) => {
                     <IconButton color="primary" component="span" onClick={() => props.onDriverOpen(row)}>
                       <VisibilityIcon fontSize="small"/>
                     </IconButton>
-                    <IconButton color="primary" component="span" onClick={() => props.onEditClientDialogOpen(row)}>
+                    <IconButton color="primary" component="span" onClick={() => props.onEditClientDialogOpen(row, false)}>
                       <EditIcon fontSize="small"/>
                     </IconButton>
-                    <IconButton color="primary" component="span">
+                    <IconButton color="primary" component="span" onClick={() => props.onConfirmDeletionDialogOpen(row, true)}>
                       <DeleteIcon fontSize="small"/>
                     </IconButton>
                   </div>

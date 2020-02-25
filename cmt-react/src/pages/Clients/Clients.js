@@ -12,9 +12,10 @@ import {
 import Grid from "../../components/Grid/Grid";
 import GridHeader from "../../components/GridHeader/GridHeader";
 import Drawer from '@material-ui/core/Drawer';
-import DrawerContent from "../../components/DrawerContent/DrawerContent";
+import ViewClientDrawer from "../../components/ViewClientDrawer/ViewClientDrawer";
 import Dialog from '@material-ui/core/Dialog';
-import AddOrEditClientDialog from "../../components/addOrEditClientDialog/addOrEditClientDialog";
+import AddOrEditClientDialog from "../../components/AddOrEditClientDialog/AddOrEditClientDialog";
+import ConfirmDeletionDialog from "../../components/ConfirmDeletionDialog/ConfirmDeletionDialog";
 
 
 class Clients extends Component {
@@ -25,7 +26,8 @@ class Clients extends Component {
       // isDrawerOpened: false,
       // clients: [],
       // client: {}
-      client: null
+      client: null,
+      isConfirmDeletionDialogOpened: false
     };
   }
 
@@ -69,11 +71,11 @@ class Clients extends Component {
   };
 
 
-  onDialogToggle = (clickedClient) => {
-    console.log(clickedClient);
+  onDialogToggle = (clickedClient, isDeletionDialog) => {
     this.setState({
       ...this.state,
-      client: clickedClient
+      client: clickedClient,
+      isConfirmDeletionDialogOpened: isDeletionDialog
     });
     this.props.changeDialogOpenState(!this.props.modals.dialogOpenState);
   };
@@ -92,7 +94,8 @@ class Clients extends Component {
         {this.props.clients.length > 0
           ? <Grid data={this.props.clients}
                   onDriverOpen={this.onDrawerToggle}
-                  onEditClientDialogOpen={this.onDialogToggle}/>
+                  onEditClientDialogOpen={this.onDialogToggle}
+                  onConfirmDeletionDialogOpen={this.onDialogToggle}/>
           : null}
 
         {this.props.accounts.accounts.length > 0
@@ -105,12 +108,13 @@ class Clients extends Component {
 
 
         <Drawer anchor="right" open={this.props.modals.drawerOpenState} onClose={this.onDrawerToggle}>
-          <DrawerContent client={this.state.client}/>
+          <ViewClientDrawer client={this.state.client}/>
         </Drawer>
 
         <Dialog onClose={this.onDialogToggle}
                 open={this.props.modals.dialogOpenState}>
-          <AddOrEditClientDialog client={this.state.client}/>
+          {!this.state.isConfirmDeletionDialogOpened && <AddOrEditClientDialog client={this.state.client}/>}
+          {this.state.isConfirmDeletionDialogOpened && <ConfirmDeletionDialog client={this.state.client}/>}
         </Dialog>
       </Fragment>
     )
