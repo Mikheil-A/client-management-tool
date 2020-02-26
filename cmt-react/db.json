@@ -75,28 +75,8 @@
         "address": "Howe St, Vancouver, BC VZS 2S8"
       },
       "photo": "https://randomuser.me/api/portraits/men/90.jpg"
-    },
-    {
-      "id": 5,
-      "firstName": "Charles",
-      "lastName": "Chaplin",
-      "gender": "მამრობითი",
-      "pid": "44444444444",
-      "phone": 542344444,
-      "legalAddress": {
-        "country": "UK",
-        "city": "London",
-        "address": "Chaplin Avenue 1"
-      },
-      "actualAddress": {
-        "country": "UK",
-        "city": "London",
-        "address": "Howe St, Vancouver, BC VZS 2S8"
-      },
-      "photo": "https://randomuser.me/api/portraits/men/32.jpg"
     }
   ],
-
   "accounts": [
     {
       "id": 1,

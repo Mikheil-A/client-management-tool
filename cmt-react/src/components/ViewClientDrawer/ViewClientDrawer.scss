@@ -1,0 +1,16 @@
+.view-client-drawer {
+	padding: 12px 20px;
+
+	header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		img {
+			border-radius: 50%;
+			height: 70px;
+			width: 70px;
+			margin-right: 10px;
+		}
+	}
+}

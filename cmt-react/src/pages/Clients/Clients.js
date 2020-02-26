@@ -27,7 +27,26 @@ class Clients extends Component {
       // isDrawerOpened: false,
       // clients: [],
       // client: {}
-      client: null,
+      // client: null,
+      client: {
+        "id": 1,
+        "firstName": "Misho",
+        "lastName": "Aleksidze",
+        "gender": "მამრობითი",
+        "pid": "00000000000",
+        "phone": 555555555,
+        "legalAddress": {
+          "country": "Georgia",
+          "city": "Gori",
+          "address": "address"
+        },
+        "actualAddress": {
+          "country": "Georgia",
+          "city": "Tbilisi",
+          "address": "address"
+        },
+        "photo": "https://randomuser.me/api/portraits/men/93.jpg"
+      },
       isConfirmDeletionDialogOpened: false,
       isLoading: false
     };
@@ -38,6 +57,7 @@ class Clients extends Component {
 
     setTimeout(() => {
       // this.onDialogToggle({});
+      this.props.changeDrawerOpenState(true);
     }, 400);
   }
 
