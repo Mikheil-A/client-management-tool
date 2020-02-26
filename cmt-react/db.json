@@ -75,40 +75,52 @@
         "address": "Howe St, Vancouver, BC VZS 2S8"
       },
       "photo": "https://randomuser.me/api/portraits/men/90.jpg"
+    },
+    {
+      "id": 5,
+      "firstName": "Charles",
+      "lastName": "Chaplin",
+      "gender": "მამრობითი",
+      "pid": "44444444444",
+      "phone": 542344444,
+      "legalAddress": {
+        "country": "UK",
+        "city": "London",
+        "address": "Chaplin Avenue 1"
+      },
+      "actualAddress": {
+        "country": "UK",
+        "city": "London",
+        "address": "Howe St, Vancouver, BC VZS 2S8"
+      },
+      "photo": "https://randomuser.me/api/portraits/men/32.jpg"
     }
   ],
   "accounts": [
     {
       "id": 1,
-      "client-id": 1,
+      "clientId": 1,
       "type": "მიმდინარე",
       "currency": "USD",
       "status": "აქტიური"
     },
     {
-      "id": 2,
-      "client-id": 1,
-      "type": "დაგროვებითი",
-      "currency": "GEL",
-      "status": "გახურული"
-    },
-    {
       "id": 3,
-      "client-id": 2,
+      "clientId": 2,
       "type": "შემნახველი",
       "currency": "EUR",
       "status": "აქტიური"
     },
     {
       "id": 4,
-      "client-id": 2,
+      "clientId": 2,
       "type": "მიმდინარე",
       "currency": "RUB",
       "status": "გახურული"
     },
     {
       "id": 5,
-      "client-id": 3,
+      "clientId": 3,
       "type": "მიმდინარე",
       "currency": "USD",
       "status": "აქტიური"

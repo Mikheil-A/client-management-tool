@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cmt-react/src/components/AddOrEditAccountDialog/AddOrEditAccountDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmt-react/src/components/AddOrEditAccountDialog/AddOrEditAccountDialog.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/components/ViewClientDrawer/ViewClientDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/ViewClientDrawer/ViewClientDrawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmt-react/src/components/ViewClientDrawer/ViewClientDrawer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/ViewClientDrawer/ViewClientDrawer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/pages/Clients/Clients.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +77,7 @@
       <workItem from="1582436553283" duration="602000" />
       <workItem from="1582531890979" duration="19221000" />
       <workItem from="1582622647134" duration="5430000" />
-      <workItem from="1582723246128" duration="1219000" />
+      <workItem from="1582723246128" duration="5508000" />
     </task>
     <servers />
   </component>

@@ -115,35 +115,35 @@ But I build it in React later just for the sake of learning and practising React
   "accounts": [
     {
       "id": 1,
-      "client-id": 1,
+      "clientId": 1,
       "type": "მიმდინარე",
       "currency": "USD",
       "status": "აქტიური"
     },
     {
       "id": 2,
-      "client-id": 1,
+      "clientId": 1,
       "type": "დაგროვებითი",
       "currency": "GEL",
       "status": "გახურული"
     },
     {
       "id": 3,
-      "client-id": 2,
+      "clientId": 2,
       "type": "შემნახველი",
       "currency": "EUR",
       "status": "აქტიური"
     },
     {
       "id": 4,
-      "client-id": 2,
+      "clientId": 2,
       "type": "მიმდინარე",
       "currency": "RUB",
       "status": "გახურული"
     },
     {
       "id": 5,
-      "client-id": 3,
+      "clientId": 3,
       "type": "მიმდინარე",
       "currency": "USD",
       "status": "აქტიური"

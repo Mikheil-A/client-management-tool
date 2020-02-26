@@ -13,4 +13,14 @@
 			margin-right: 10px;
 		}
 	}
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&:hover {
+			background-color: #F7F7FA;
+		}
+	}
 }
