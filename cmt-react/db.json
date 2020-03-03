@@ -98,11 +98,11 @@
   ],
   "accounts": [
     {
-      "id": 1,
-      "clientId": 1,
       "type": "მიმდინარე",
-      "currency": "USD",
-      "status": "აქტიური"
+      "currency": "GEL",
+      "status": "აქტიური",
+      "id": 1,
+      "clientId": 1
     },
     {
       "id": 3,
@@ -124,6 +124,13 @@
       "type": "მიმდინარე",
       "currency": "USD",
       "status": "აქტიური"
+    },
+    {
+      "type": "დაგროვებითი",
+      "currency": "RUB",
+      "status": "გახურული",
+      "clientId": 1,
+      "id": 6
     }
   ]
 }

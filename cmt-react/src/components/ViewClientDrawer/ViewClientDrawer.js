@@ -20,6 +20,10 @@ const ViewClientDrawer = (props) => {
   }, []);
 
 
+  const testSave = () => {
+    console.log(222);
+  };
+
   const fetchAccounts = () => {
     axios.get('/accounts')
       .then(res => {
@@ -28,9 +32,14 @@ const ViewClientDrawer = (props) => {
       })
   };
 
-  const openAddOrEditAccountDialog = (account) => {
-    setSelectedAccount(account);
+  const openAddOrEditAccountDialog = (account = null) => {
     setIsDialogOpened(true);
+
+    if (!account) {
+      // if add mode
+      return
+    }
+    setSelectedAccount(account);
   };
 
   const deleteAccount = (account) => {
@@ -72,12 +81,14 @@ const ViewClientDrawer = (props) => {
         </div>
       )) : null}
 
-      <Button variant="contained" color="primary">Create a new account</Button>
+      <Button variant="contained" color="primary"
+              onClick={openAddOrEditAccountDialog}>Create a new account</Button>
 
 
       <Dialog onClose={() => setIsDialogOpened(false)}
               open={isDialogOpened}>
-        <AddOrEditAccountDialog data={selectedAccount}/>
+        <AddOrEditAccountDialog account={selectedAccount}
+                                userId={props.client.id}/>
       </Dialog>
     </div>
   )
