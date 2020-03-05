@@ -131,6 +131,55 @@
       "status": "გახურული",
       "clientId": 1,
       "id": 6
+    },
+    {
+      "type": "",
+      "currency": "",
+      "status": "",
+      "clientId": 1,
+      "id": 7
+    },
+    {
+      "type": "",
+      "currency": "",
+      "status": "",
+      "clientId": 1,
+      "id": 8
+    },
+    {
+      "type": "",
+      "currency": "",
+      "status": "",
+      "clientId": 1,
+      "id": 9
+    },
+    {
+      "type": "",
+      "currency": "",
+      "status": "",
+      "clientId": 1,
+      "id": 10
+    },
+    {
+      "type": "",
+      "currency": "",
+      "status": "",
+      "clientId": 1,
+      "id": 11
+    },
+    {
+      "type": "",
+      "currency": "",
+      "status": "",
+      "clientId": 1,
+      "id": 12
+    },
+    {
+      "type": "",
+      "currency": "",
+      "status": "",
+      "clientId": 1,
+      "id": 13
     }
   ]
 }

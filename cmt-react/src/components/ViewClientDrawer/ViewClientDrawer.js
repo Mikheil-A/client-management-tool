@@ -6,6 +6,8 @@ import IconButton from "@material-ui/core/IconButton";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import AddOrEditAccountDialog from "../AddOrEditAccountDialog/AddOrEditAccountDialog";
+import {shouldUpdateClientAccountsDrawer} from "../../redux/actions/actions";
+import {connect, useDispatch, useSelector} from "react-redux";
 
 
 const ViewClientDrawer = (props) => {
@@ -13,12 +15,34 @@ const ViewClientDrawer = (props) => {
   const [selectedAccount, setSelectedAccount] = useState({});
   const [isDialogOpened, setIsDialogOpened] = useState(false);
 
+  const [shouldRefetchAccounts, setShouldRefetchAccounts] = useState(false);
+
+
+
+  const {shouldUpdateAccounts} = useSelector(state => ({
+    shouldUpdateAccounts: state.others.shouldUpdate
+  }));
+  const dispatch = useDispatch();
 
   useEffect(() => {
     console.log(2222222, props);
     fetchAccounts();
   }, []);
 
+  useEffect(() => {
+    // console.log('>>>>>>>>>>>>', shouldUpdateAccounts);
+  }, [shouldUpdateAccounts]);
+
+  useEffect(() => {
+    console.log('>>>>>>shouldRefetchAccounts>>>>>>', shouldRefetchAccounts);
+    // updateDrawer();
+  }, [shouldRefetchAccounts]);
+
+
+  const updateDrawer = () => {
+    console.log('re-fetch accounts');
+    // fetchAccounts();
+  };
 
   const testSave = () => {
     console.log(222);
@@ -32,14 +56,10 @@ const ViewClientDrawer = (props) => {
       })
   };
 
-  const openAddOrEditAccountDialog = (account = null) => {
-    setIsDialogOpened(true);
-
-    if (!account) {
-      // if add mode
-      return
-    }
+  const openAddOrEditAccountDialog = (account) => {
     setSelectedAccount(account);
+    setShouldRefetchAccounts(false);
+    setIsDialogOpened(true);
   };
 
   const deleteAccount = (account) => {
@@ -47,6 +67,10 @@ const ViewClientDrawer = (props) => {
       .then(() => {
         fetchAccounts();
       })
+  };
+
+  const logDataFromChild = (msg) => {
+    console.log('data from child', msg);
   };
 
 
@@ -82,16 +106,27 @@ const ViewClientDrawer = (props) => {
       )) : null}
 
       <Button variant="contained" color="primary"
-              onClick={openAddOrEditAccountDialog}>Create a new account</Button>
+              onClick={() => openAddOrEditAccountDialog({})}>Create a new account</Button>
 
 
       <Dialog onClose={() => setIsDialogOpened(false)}
               open={isDialogOpened}>
         <AddOrEditAccountDialog account={selectedAccount}
-                                userId={props.client.id}/>
+                                userId={props.client.id}
+                                onSave={updateDrawer}
+                                dataFromChild={logDataFromChild}/>
       </Dialog>
     </div>
   )
 };
 
-export default ViewClientDrawer;
+
+const mapStateToProps = state => ({
+  others: state.others
+});
+
+const mapDispatchToProps = {
+  shouldUpdateClientAccountsDrawer
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ViewClientDrawer);

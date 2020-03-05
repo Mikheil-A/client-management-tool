@@ -1,8 +1,9 @@
 import {
-  ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT, ADD_ACCOUNT,
-  EDIT_ACCOUNT, REMOVE_ACCOUNT,
+  ADD_CLIENT, EDIT_CLIENT, REMOVE_CLIENT,
+  ADD_ACCOUNT, EDIT_ACCOUNT, REMOVE_ACCOUNT,
   CHANGE_DRAWER_OPEN_STATE, CHANGE_DIALOG_OPEN_STATE,
-  CHANGE_CLIENTS_GRID_STATE
+  CHANGE_CLIENTS_GRID_STATE,
+  SHOULD_UPDATE_CLIENT_ACCOUNTS_DRAWER
 } from "./actionTypes";
 
 
@@ -77,5 +78,15 @@ export const changeClientsGridState = gridState => ({
   type: CHANGE_CLIENTS_GRID_STATE,
   payload: {
     gridState
+  }
+});
+
+
+// Others
+
+export const shouldUpdateClientAccountsDrawer = shouldUpdate => ({
+  type: SHOULD_UPDATE_CLIENT_ACCOUNTS_DRAWER,
+  payload: {
+    shouldUpdate
   }
 });

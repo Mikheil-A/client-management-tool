@@ -22,6 +22,11 @@ const AddOrEditAccountDialog = (props) => {
     }
   };
 
+  const passDataToParent = () => {
+    props.dataFromChild('this is data');
+    props.onSave();
+  };
+
   const onSave = formData => {
     let reqData = {
       ...formData
@@ -124,6 +129,9 @@ const AddOrEditAccountDialog = (props) => {
         <div id="submit-btn-container">
           <Button variant="contained" color="primary" type="submit">
             Save</Button>
+
+          {/*<button onClick={props.onSave}>on test click</button>*/}
+          <button onClick={passDataToParent}>on test click</button>
         </div>
       </form>
     </div>
