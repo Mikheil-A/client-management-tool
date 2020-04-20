@@ -246,6 +246,8 @@ const AddOrEditClientDialog = (props) => {
             Submit
           </Button>
           {/*<button onClick={testClick}>Click me!</button>*/}
+
+          {/*DISPLAYING OBJECT USING JSON.STRINGIFY()*/}
           {/*<pre>{JSON.stringify(formState, null, 2)}</pre>*/}
         </div>
       </form>

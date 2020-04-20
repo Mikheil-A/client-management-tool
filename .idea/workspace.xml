@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5345029c-0a3b-48ec-b484-95ea07e1c8a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/others.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/AddOrEditAccountDialog/AddOrEditAccountDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/AddOrEditAccountDialog/AddOrEditAccountDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/ViewClientDrawer/ViewClientDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/ViewClientDrawer/ViewClientDrawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmt-react/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/redux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmt-react/src/components/AddOrEditClientDialog/AddOrEditClientDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmt-react/src/components/AddOrEditClientDialog/AddOrEditClientDialog.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +75,14 @@
       <workItem from="1582723246128" duration="5541000" />
       <workItem from="1583217284214" duration="605000" />
       <workItem from="1583247327082" duration="4394000" />
-      <workItem from="1583421549839" duration="3169000" />
+      <workItem from="1583421549839" duration="3274000" />
+      <workItem from="1583487344177" duration="602000" />
+      <workItem from="1584366769888" duration="272000" />
+      <workItem from="1584442423411" duration="1574000" />
+      <workItem from="1585841144325" duration="948000" />
+      <workItem from="1586002027310" duration="1317000" />
+      <workItem from="1586696931052" duration="82000" />
+      <workItem from="1587386177853" duration="697000" />
     </task>
     <servers />
   </component>
